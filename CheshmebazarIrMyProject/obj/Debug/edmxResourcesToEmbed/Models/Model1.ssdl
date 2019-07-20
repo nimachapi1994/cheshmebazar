@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbcheshmebazarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CategoryChilds">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Parent_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="CategoryParents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MsgCustomerToAdmins">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" />
+    <Property Name="Txt" Type="nvarchar" MaxLength="1500" />
+    <Property Name="Datee" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MsgToStores">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Family" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailorPhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Txt" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Store_Id" Type="int" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Packages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PackageMonth" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayAmount" Type="int" />
+  </EntityType>
+  <EntityType Name="PCommentOKs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameAndFname" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdminConfirm" Type="bit" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Product_Id" Type="int" />
+    <Property Name="Txt" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Txt" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Logo" Type="varbinary(max)" />
+    <Property Name="Price" Type="int" />
+    <Property Name="KeyWords" Type="nvarchar" MaxLength="500" />
+    <Property Name="AdminConfirm" Type="bit" />
+    <Property Name="Store_Id" Type="int" />
+    <Property Name="Like" Type="int" />
+    <Property Name="DiscountPesend" Type="int" />
+    <Property Name="OfPrice" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="StartDateDiscount" Type="datetime" />
+    <Property Name="ExpiredDateDiscount" Type="datetime" />
+    <Property Name="TotalVisitors" Type="int" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PurchaseCarts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Store_Id" Type="int" />
+    <Property Name="Package_Id" Type="int" />
+    <Property Name="DateOfPay" Type="datetime" />
+    <Property Name="IsPayed" Type="bit" />
+    <Property Name="ExpiredDate" Type="datetime" />
+    <Property Name="User_Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="Token" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SComments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Txt" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Store_Id" Type="int" />
+    <Property Name="AdminConfirm" Type="bit" />
+    <Property Name="NameAndFname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SliderForProducts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_Id" Type="int" />
+    <Property Name="pic" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="SliderForStores">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Store_Id" Type="int" />
+    <Property Name="Pic" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Stores">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ManagmentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_date" Type="datetime" />
+    <Property Name="TotalVistor" Type="int" />
+    <Property Name="Motto" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rate" Type="int" />
+    <Property Name="KeyWords" Type="nvarchar" MaxLength="500" />
+    <Property Name="Txt" Type="nvarchar" MaxLength="4000" />
+    <Property Name="QrCode" Type="varbinary(max)" />
+    <Property Name="WebSite" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneOne" Type="nvarchar" MaxLength="12" />
+    <Property Name="Province" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostalCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="2000" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdminConfirm" Type="bit" />
+    <Property Name="User_id" Type="nvarchar" MaxLength="128" />
+    <Property Name="Like" Type="int" />
+    <Property Name="Dislike" Type="int" />
+    <Property Name="Logo" Type="varbinary(max)" />
+    <Property Name="Location" Type="nchar" MaxLength="10" />
+    <Property Name="PhoneTwo" Type="nvarchar" MaxLength="12" />
+    <Property Name="PhoneThree" Type="nvarchar" MaxLength="12" />
+    <Property Name="VisitLink" Type="nvarchar" MaxLength="200" />
+    <Property Name="Video" Type="nvarchar" MaxLength="500" />
+    <Property Name="TelegramChannel" Type="nvarchar" MaxLength="100" />
+    <Property Name="Facebook" Type="nvarchar" MaxLength="100" />
+    <Property Name="GooglePlus" Type="nvarchar" MaxLength="100" />
+    <Property Name="LikedIn" Type="nvarchar" MaxLength="100" />
+    <Property Name="Instagram" Type="nvarchar" MaxLength="100" />
+    <Property Name="Twitter" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="100" />
+    <Property Name="ChildCategory_Id" Type="int" />
+    <Property Name="ParentCategory_Id" Type="int" />
+    <Property Name="DiscountPrice" Type="int" />
+    <Property Name="DiscountPersend" Type="int" />
+    <Property Name="StartDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExpiredDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Whsup" Type="nvarchar" MaxLength="15" />
+    <Property Name="EditDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WorkHours">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShiftOneStart0" Type="nvarchar" MaxLength="10" />
+    <Property Name="shiftOneEnd0" Type="nvarchar" MaxLength="10" />
+    <Property Name="ShiftTwoStart0" Type="nvarchar" MaxLength="10" />
+    <Property Name="ShiftTwoEnd0" Type="nvarchar" MaxLength="10" />
+    <Property Name="ShiftOneStart1" Type="nchar" MaxLength="10" />
+    <Property Name="shiftOneEnd1" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoStart1" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoEnd1" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftOneStart2" Type="nchar" MaxLength="10" />
+    <Property Name="shiftOneEnd2" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoStart2" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoEnd2" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftOneStart3" Type="nchar" MaxLength="10" />
+    <Property Name="shiftOneEnd3" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoStart3" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoEnd3" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftOneStart4" Type="nchar" MaxLength="10" />
+    <Property Name="shiftOneEnd4" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoStart4" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoEnd4" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftOneStart5" Type="nchar" MaxLength="10" />
+    <Property Name="shiftOneEnd5" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoStart5" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoEnd5" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftOneStart6" Type="nchar" MaxLength="10" />
+    <Property Name="shiftOneEnd6" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoStart6" Type="nchar" MaxLength="10" />
+    <Property Name="ShiftTwoEnd6" Type="nchar" MaxLength="10" />
+    <Property Name="Store_Id" Type="int" />
+  </EntityType>
+  <Association Name="FK_CategoryChild_CategoryParent">
+    <End Role="CategoryParents" Type="Self.CategoryParents" Multiplicity="0..1" />
+    <End Role="CategoryChilds" Type="Self.CategoryChilds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryParents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CategoryChilds">
+        <PropertyRef Name="Parent_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MsgToStores_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="0..1" />
+    <End Role="MsgToStores" Type="Self.MsgToStores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MsgToStores">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PCommentOK_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="PCommentOKs" Type="Self.PCommentOKs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PCommentOKs">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseCart_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="0..1" />
+    <End Role="PurchaseCarts" Type="Self.PurchaseCarts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseCarts">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SComments_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="0..1" />
+    <End Role="SComments" Type="Self.SComments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SComments">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SliderForProducts_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="SliderForProducts" Type="Self.SliderForProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SliderForProducts">
+        <PropertyRef Name="product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SliderForStores_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="0..1" />
+    <End Role="SliderForStores" Type="Self.SliderForStores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SliderForStores">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stores_CategoryChild">
+    <End Role="CategoryChilds" Type="Self.CategoryChilds" Multiplicity="0..1" />
+    <End Role="Stores" Type="Self.Stores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryChilds">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Stores">
+        <PropertyRef Name="ChildCategory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stores_CategoryParent">
+    <End Role="CategoryParents" Type="Self.CategoryParents" Multiplicity="0..1" />
+    <End Role="Stores" Type="Self.Stores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryParents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Stores">
+        <PropertyRef Name="ParentCategory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkHours_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="0..1" />
+    <End Role="WorkHours" Type="Self.WorkHours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WorkHours">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DeleteChildCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteParentCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getcategorychild" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="i" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getCompateDataControlPanel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ShowCompaleStore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ShowOneProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sm_ShowDicountStores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_AddProductPartFirst" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="logo" Type="image" Mode="In" />
+  </Function>
+  <Function Name="sp_AdminDeleteStore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_AdminStoreConfirm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DeletesliderImageStore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="i" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_DeleteStorePart7GetImages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="img" Type="image" Mode="In" />
+    <Parameter Name="store_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getallimages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user_id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_GetProductsComment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="txt" Type="nvarchar" Mode="In" />
+    <Parameter Name="product_id" Type="int" Mode="In" />
+    <Parameter Name="mail" Type="nvarchar" Mode="In" />
+    <Parameter Name="AdminConfirm" Type="bit" Mode="In" />
+    <Parameter Name="commentdate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="Sp_InsertStorePart7GetImages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="img" Type="image" Mode="In" />
+    <Parameter Name="store_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ShowMsgCustomerToStore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="i" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ShowStoreComments" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="i" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_StoreUpdate_keywords_Part6" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="sp_StoreUpdate keywords Part6">
+    <Parameter Name="keywords" Type="nvarchar" Mode="In" />
+    <Parameter Name="store_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_StoreUpdate_phonenumber_part4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="sp_StoreUpdate phonenumber part4">
+    <Parameter Name="website" Type="nvarchar" Mode="In" />
+    <Parameter Name="phoneone" Type="nvarchar" Mode="In" />
+    <Parameter Name="phonetwo" Type="nvarchar" Mode="In" />
+    <Parameter Name="phonethree" Type="nvarchar" Mode="In" />
+    <Parameter Name="mobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="store_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_StoreUpdate_social_Part5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="sp_StoreUpdate social Part5">
+    <Parameter Name="facebook" Type="nvarchar" Mode="In" />
+    <Parameter Name="googlelplus" Type="nvarchar" Mode="In" />
+    <Parameter Name="linkedin" Type="nvarchar" Mode="In" />
+    <Parameter Name="instagram" Type="nvarchar" Mode="In" />
+    <Parameter Name="twitter" Type="nvarchar" Mode="In" />
+    <Parameter Name="telegramchannel" Type="nvarchar" Mode="In" />
+    <Parameter Name="whatsup" Type="nvarchar" Mode="In" />
+    <Parameter Name="storeid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_StoreUpdatebaseinfo_mottoandtext_Part2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="sp_StoreUpdatebaseinfo mottoandtext Part2">
+    <Parameter Name="txt" Type="nvarchar" Mode="In" />
+    <Parameter Name="motto" Type="nvarchar" Mode="In" />
+    <Parameter Name="chilgategory_id" Type="int" Mode="In" />
+    <Parameter Name="parentgategory_id" Type="int" Mode="In" />
+    <Parameter Name="storeid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_StoreUpdateComplatedata_Cityproviance_part3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="sp_StoreUpdateComplatedata Cityproviance part3">
+    <Parameter Name="province" Type="nvarchar" Mode="In" />
+    <Parameter Name="postalcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="store_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_StoreUpdateDiscount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="startdate" Type="nvarchar" Mode="In" />
+    <Parameter Name="enddate" Type="nvarchar" Mode="In" />
+    <Parameter Name="perdis" Type="int" Mode="In" />
+    <Parameter Name="storeid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_StoreUpdatePartGetVideoLinkString" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="videolink" Type="nvarchar" Mode="In" />
+    <Parameter Name="store_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_StoreUpdatePartmakestorePart1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="managmentname" Type="nvarchar" Mode="In" />
+    <Parameter Name="storename" Type="nvarchar" Mode="In" />
+    <Parameter Name="logo" Type="image" Mode="In" />
+    <Parameter Name="visitlink" Type="nvarchar" Mode="In" />
+    <Parameter Name="storeid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_UpdateStorePart7GetImages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="img" Type="image" Mode="In" />
+    <Parameter Name="store_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="update123" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="dbcheshmebazarModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoryChilds" EntityType="Self.CategoryChilds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoryParents" EntityType="Self.CategoryParents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MsgCustomerToAdmins" EntityType="Self.MsgCustomerToAdmins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MsgToStores" EntityType="Self.MsgToStores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Packages" EntityType="Self.Packages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PCommentOKs" EntityType="Self.PCommentOKs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseCarts" EntityType="Self.PurchaseCarts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SComments" EntityType="Self.SComments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SliderForProducts" EntityType="Self.SliderForProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SliderForStores" EntityType="Self.SliderForStores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stores" EntityType="Self.Stores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkHours" EntityType="Self.WorkHours" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CategoryChild_CategoryParent" Association="Self.FK_CategoryChild_CategoryParent">
+      <End Role="CategoryParents" EntitySet="CategoryParents" />
+      <End Role="CategoryChilds" EntitySet="CategoryChilds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MsgToStores_Stores" Association="Self.FK_MsgToStores_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="MsgToStores" EntitySet="MsgToStores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PCommentOK_Products" Association="Self.FK_PCommentOK_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="PCommentOKs" EntitySet="PCommentOKs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Stores" Association="Self.FK_Products_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseCart_Stores" Association="Self.FK_PurchaseCart_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="PurchaseCarts" EntitySet="PurchaseCarts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SComments_Stores" Association="Self.FK_SComments_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="SComments" EntitySet="SComments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SliderForProducts_Products" Association="Self.FK_SliderForProducts_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="SliderForProducts" EntitySet="SliderForProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SliderForStores_Stores" Association="Self.FK_SliderForStores_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="SliderForStores" EntitySet="SliderForStores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stores_CategoryChild" Association="Self.FK_Stores_CategoryChild">
+      <End Role="CategoryChilds" EntitySet="CategoryChilds" />
+      <End Role="Stores" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stores_CategoryParent" Association="Self.FK_Stores_CategoryParent">
+      <End Role="CategoryParents" EntitySet="CategoryParents" />
+      <End Role="Stores" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkHours_Stores" Association="Self.FK_WorkHours_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="WorkHours" EntitySet="WorkHours" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

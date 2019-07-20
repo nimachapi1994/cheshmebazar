@@ -1,0 +1,161 @@
+﻿
+@{
+    ViewBag.Title = "CommentManagmentAddStore";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+@using CheshmebazarIrMyProject.Models;
+
+@foreach (var item in ViewBag.dd as IEnumerable<ShowCompaleStore_Result>)
+{
+    <div class="row" style="background-color:white">
+        <br />
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            @if (item.Logo != null)
+            {
+                <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item.Logo)}")" alt="@item.Name" width="150" height="100" />
+
+            }
+            else
+            {
+               <img src="~/Template/img/logo/glasses.png" style="width:100px;height:50px" class="img img-rounded img-responsive img-thumbnail" />
+
+            }        </div>
+        <div class="col-sm-3">
+            <b>@item.Name</b> <a href="" class="btn btn-bazaar btn-sm"><b>صفحه فروشگاه</b> </a>
+            <br />
+            <b>نام ونام خانوادگی مدیر :</b> <b>@item.ManagmentName</b>
+            <br />
+            @if (item.AdminConfirm == true)
+            {
+                <b>وضعیت : </b> <b class="text-success">منتشر شده </b>
+            }
+            else
+            {
+                <b>وضعیت : </b> <b class="text-danger">منتشر نشده </b>
+            }
+            <br />
+            @*<form action="/ControlPanel/StoreDisable" method="post"><button class="btn btn-danger btn-xs"><small>&times;</small> <b>لغو انتشار فروشگاه</b></button></form>*@
+        </div>
+        <div class="col-sm-7"></div>
+
+
+
+    </div>
+}
+<br />
+<div class="tab-bar">
+    <div class="container">
+        <ul class="nav nav-tabs pull-right">
+
+            <li class="pull-left">
+                <a href="/controlpanel/basedataaddstore"><small class="a">اطلاعات</small></a>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/complatedataaddstore"><small class="a">اطلاعات تکمیلی</small></a>
+            </li>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/imgandvideoaddstore"><small class="a">تصاویر و تیزر</small></a>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/selectlocation"><small class="a">نقشه</small></a>
+            </li>
+            <li class="active pull-left">
+                <a href="/controlpanel/commentmanagmentaddstore"><small class="a">مدیریت کامنت های فروشگاه</small></a>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="col-sm-2"></div>
+
+    @foreach (var item in ViewBag.showcomment as IEnumerable<SComment>)
+    {
+
+        <div class="col-sm-8 ">
+
+            <br />
+            <div>
+
+                <a val="@item.Id" class="btn btn-danger pull-right" id="btnDelete">حذف</a>
+
+
+
+
+                <span class="pull-left">@item.NameAndFname</span>
+                <br />
+                <span><small style="padding:2%"></small></span>
+                تاریخ ارسال 
+                 <span class="pull-left">@item.Date</span>
+
+                <br />
+                <hr />
+
+                <div class="cr" style="color:black;background-color:white;font-style:normal">
+
+
+                    <p style="padding:5%">
+                        @item.Txt
+                    </p>            <br />
+
+
+                </div>
+
+
+                <br />
+
+
+
+
+
+
+            </div>
+              
+          </div>
+    }
+
+    <div class="col-sm-2">
+
+
+
+
+    </div>
+</div>
+   
+<script src="~/Template/js/jquery-2.js"></script>
+<script>
+    $(btnDelete).click(function () {
+        var btn = $(this);
+        if (confirm('آیا میخواهید حذف کنید؟')==true) {
+            jQuery.post('/controlpanel/deletecomment', { id: $(this).attr('val') }, function (data) {
+                if (data != null && data == "ok") {
+                   $(btn).parent().parent().remove()
+                }
+            })
+            return true;
+        } else {
+            return false;
+        }
+
+    })
+</script>
+
+    
+  
+    
+   
+
+   
+   
+
+
+<hr style="color:black"/>

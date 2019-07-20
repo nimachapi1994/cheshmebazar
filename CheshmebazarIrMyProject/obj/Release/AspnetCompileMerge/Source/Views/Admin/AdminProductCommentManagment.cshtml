@@ -1,0 +1,100 @@
+﻿@{
+
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>مدیریت کامنت تمام محصولات</h2>
+
+<div class="row">
+    <div class="col-sm-2"></div>
+
+    @foreach (var item in ViewBag.showproductcomments as IEnumerable<CheshmebazarIrMyProject.Models.PCommentOK>)
+    {
+
+        <div class="col-sm-8 ">
+
+            <br />
+            <div class="alert-success" id="divshowconfirmsuccess" val="@item.Id"></div>
+            <div class="pull-right">
+                <label style="color:green">تایید</label>
+                <input type="checkbox" class="btn btn-lg" value="@item.Id" id="ChkbConfirm" />
+                <span style="padding-right:4%"></span>
+
+                <a val="@item.Id" class="btn btn-danger" id="btnDelete">حذف</a>
+                <br />
+                <label>@item.NameAndFname</label>
+            </div>
+            <div class="pull-right">
+
+                <a href="/store/product?id=@(item.Product.Id)" class="btn btn-info">مشاهده محصول مربوط به این کامنت</a>
+
+            </div>
+            <br />
+            <hr />
+
+            <div class="cr" style="color:black;background-color:white;font-style:normal">
+
+
+                <p style="padding:5%">
+                    @item.Txt
+                </p>            <br />
+
+
+            </div>
+
+
+            <br />
+
+
+       
+
+
+
+        </div>
+    }
+
+    <div class="col-sm-2">
+
+
+
+
+    </div>
+</div>
+<script src="~/Template/js/jquery-2.js"></script>
+<script>
+    $(btnDelete).click(function () {
+        var btn = $(this);
+        if (confirm('آیا میخواهید حذف کنید؟')==true) {
+            jQuery.post('/admin/adminProductCommentDelete', { id: $(this).attr('val') }, function (data) {
+                if (data != null && data == "ok") {
+                   $(btn).parent().parent().remove()
+                }
+            })
+            return true;
+        } else {
+            return false;
+        }
+
+    })
+</script>
+<script>
+    $(function () {
+        $(ChkbConfirm).change(function () {
+            var chek = $(this);
+            if ($(this).prop('checked')) {
+
+
+                jQuery.post('/admin/AdminProductCommentConfirm', { id: ($(this).val()) }, function (data) {
+                    if (data!=null && data=="ok") {
+                        if ($(divshowconfirmsuccess).attr('val') == $(chek).val()) {
+                            $(divshowconfirmsuccess).append('ok')
+
+                        }
+                    }
+                })
+
+
+            }
+        })
+    })
+</script>

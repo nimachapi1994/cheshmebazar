@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "OrdersPage";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <div class="container fa-border" style="border:medium">
+            <input />
+        </div>
+       
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2" style="background-color:#48149a">
+     <div class="text-center"><h4 style="color:white"> انواع خوراک ها</h4></div>
+        <table class="table table-bordered table-hover table-responsive table-striped" id="tblshowproducts" style="background-color:white">
+            <tr>
+                <th>نام غذا</th>
+                <th>موجودیت</th>
+
+            </tr>
+            <tr>
+                <td>چلوکباب</td>
+                <td>
+                    <input type="checkbox" class="pull-left" />  <span><small style="padding:2%">ناموجود</small></span>  
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    <div class="col-sm-8">
+       
+       <div class="text-center">
+           <h4>مشاهده اطلاعات خرید های روزانه</h4>
+       </div>
+        <br />
+            <table class="table table-bordered table-responsive">
+                <tr>
+                    <th>نام و نام خانوادگی</th>
+                    <th>شماره تماس</th>
+                    <th>کد اشتراک</th>                                   
+                    <th>آدرس</th>
+                </tr>
+                <tr>
+                    <td>علی حسینی</td>
+                    <td>09171111111</td>
+                    <td>2110</td>
+                    <td>
+                        بلوار فلان
+                    </td>
+
+                   
+                </tr>
+                <tr>
+                    <th>نوع غذا</th>
+                    <th>تعداد</th>
+                   
+                </tr>
+                <tr>
+                    <td>چلو کباب</td>
+                    <td>2</td>
+                    
+                </tr>
+                <tr>
+                    <td>چلو کباب</td>
+                    <td>2</td>
+
+                </tr>
+                <tr>
+                   <td class="pull-left">قیمت کل <input value="1000"/></td>
+                </tr>
+            </table>
+        </div>
+
+  
+    <div class="col-sm-1"></div>
+</div>
+@for (int i = 0; i < 5; i++)
+{
+    <br />
+}

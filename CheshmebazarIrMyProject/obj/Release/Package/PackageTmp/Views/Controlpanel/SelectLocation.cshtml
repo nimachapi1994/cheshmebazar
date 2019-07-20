@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "WorkHoursAddStore";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+
+
+                
+@using CheshmebazarIrMyProject.Models;
+
+ @foreach (var item in ViewBag.dd as IEnumerable<ShowCompaleStore_Result>)
+ {
+    <div class="row" style="background-color:white">
+        <br />
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            @if (item.Logo != null)
+            {
+                <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item.Logo)}")" alt="@item.Name" width="150" height="100" />
+
+            }
+            else
+            {
+                <td><img src="~/Template/img/logo/glasses.png" style="width:100px;height:50px" class="img img-rounded img-responsive img-thumbnail" /></td>
+
+            }        </div>
+        <div class="col-sm-3">
+            <b>@item.Name</b> <a href="" class="btn btn-bazaar btn-sm"><b>صفحه فروشگاه</b> </a>
+            <br />
+            <b>نام ونام خانوادگی مدیر :</b> <b>@item.ManagmentName</b>
+            <br />
+            @if (item.AdminConfirm == true)
+            {
+                <b>وضعیت : </b> <b class="text-success">منتشر و تایید شده </b>
+            }
+            else
+            {
+                <b>وضعیت : </b> <b class="text-danger">در انتظار تایید </b>
+            }
+            <br />
+            <button class="btn btn-danger btn-xs"><small>&times;</small> <b>لغو انتشار فروشگاه</b></button>
+        </div>
+        <div class="col-sm-7"></div>
+
+
+
+    </div>
+ }
+
+<br />
+<div class="tab-bar">
+    <div class="container">
+        <ul class="nav nav-tabs pull-right">
+
+            <li class="pull-left">
+                <a href="/controlpanel/basedataaddstore"><small class="a">اطلاعات</small></a>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/complatedataaddstore"><small class="a">اطلاعات تکمیلی</small></a>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/imgandvideoaddstore"><small class="a">تصاویر و تیزر</small></a>
+            </li>
+            <li class="active pull-left">
+                <a href="/controlpanel/selectlocation"><small class="a">نقشه</small></a>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/commentmanagmentaddstore"><small class="a">مدیریت کامنت های فروشگاه 5</small></a>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+<br />
+
+
+    
+
+
+   
+    @*THE Key Vocab---------------------------------------------------------------------------------------------------*@
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="card-container padded">
+                
+                   
+                    <div class="text-center">
+                        <label style="font-size:small;margin:auto">
+                            موقعیت جغرافیایی کسب و کار خود را از روی نقشه پیدا کنید
+                        </label>
+                    </div>
+                    <br />
+                    <div >
+                        <div class="container text-center" GoogleMap>
+
+                            <img src="~/Template/img/2_005.jpg"style="padding-left:5%" width="900" height="500" class="text-center" />
+                            <br />
+                            <br />
+                       <div style="align-content:center;padding-left:4%">
+                           <button class="btn btn-bazaar" style="align-content:center">ذخیره اطلاعات</button>
+                        </div>
+                    </div>
+                   
+
+                
+            </div>
+
+
+
+
+
+
+            <div class="col-sm-1"></div>
+
+
+        </div>
+        </div></div>

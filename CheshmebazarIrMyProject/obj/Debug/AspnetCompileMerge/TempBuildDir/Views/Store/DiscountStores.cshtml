@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "DiscountStores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    .img2 {
+        width: 120px;
+        height: 130px;
+    }
+</style>
+<div id="sections">
+    <section class="box-list">
+        <div class="container">
+            <div class="container-wrapper">
+
+                <div class="row row16px sw-wrapper">
+
+                    @foreach (var item in ViewBag.showDiscountStores as IEnumerable<CheshmebazarIrMyProject.Models.sm_ShowDicountStores_Result>)
+                    {
+                        <div class="col col-lg-2 col-md-3 col-sm-4 col-xs-6 sw-slide">
+                            <div class="box">
+                                @if (item.DiscountPersend != null && item.StartDate != null && item.EditDate != null && item.EditDate != DateTime.Now)
+                                {
+                                    <a class="ad-box" href="/Store/StoreView?id=@(item.Id)" title="StoreName" target="_blank">
+                                        @if (item.Logo == null)
+                                        {
+                                            <div class="img">
+                                                <img src="~/Template/img/logo/glasses.png" alt="StoreName" class="placeholder img-responsive">
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="img">
+                                                <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item.Logo)}")" alt="StoreName" class="placeholder img-responsive img2">
+                                            </div>
+                                        }
+
+                                        <h4 class="title">@item.Name</h4>
+
+                                        @if (item.DiscountPersend < 20)
+                                        {
+                                            <span class="discount discount1" title="@item.DiscountPersend % تخفیف روی کل فروشگاه">@item.DiscountPersend %</span>
+
+                                        }
+                                        @if (item.DiscountPersend > 20 && item.DiscountPersend < 40)
+                                        {
+
+
+                                            <span class="discount discount2" title="@item.DiscountPersend % تخفیف روی کل فروشگاه">@item.DiscountPersend %</span>
+
+
+                                        }
+                                        @if (item.DiscountPersend > 40 && item.DiscountPersend < 60)
+                                        {
+
+
+                                            <span class="discount discount3" title="@item.DiscountPersend % تخفیف روی کل فروشگاه">@item.DiscountPersend %</span>
+
+
+                                        }
+                                        @if (item.DiscountPersend > 60 && item.DiscountPersend < 80)
+                                        {
+
+
+                                            <span class="discount discount4" title="@item.DiscountPersend % تخفیف روی کل فروشگاه">@item.DiscountPersend %</span>
+
+
+                                        }
+                                        @if (item.DiscountPersend > 80 && item.DiscountPersend < 100)
+                                        {
+
+
+                                            <span class="discount discount5" title="@item.DiscountPersend % تخفیف روی کل فروشگاه">@item.DiscountPersend %</span>
+
+
+                                        }
+                                    </a>
+                                }
+                               
+
+                                <a class="ad-region" href=""><img src="~/Icons/location-pointer.png" title="موقعیت : @item.City" style="width:12px;height:15px" /><span>@item.City</span></a>
+                            </div>
+                        </div>
+
+                    }
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+
+
+
+
+
+

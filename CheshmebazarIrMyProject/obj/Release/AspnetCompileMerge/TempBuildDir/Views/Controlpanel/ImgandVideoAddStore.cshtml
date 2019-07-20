@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewBag.Title = "ImgAddStore";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+
+@using CheshmebazarIrMyProject.Models
+@foreach (var item in ViewBag.dd as IEnumerable<ShowCompaleStore_Result>)
+{
+    <div class="row" style="background-color:white">
+        <br />
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            @if (item.Logo != null)
+            {
+                <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item.Logo)}")" alt="@item.Name" width="150" height="100" />
+
+            }
+            else
+            {
+                <td><img src="~/Template/img/logo/glasses.png" style="width:100px;height:50px" class="img img-rounded img-responsive img-thumbnail" /></td>
+
+            }        </div>
+        <div class="col-sm-3">
+            <b>@item.Name</b> <a href="" class="btn btn-bazaar btn-sm"><b>صفحه فروشگاه</b> </a>
+            <br />
+            <b>نام ونام خانوادگی مدیر :</b> <b>@item.ManagmentName</b>
+            <br />
+            @if (item.AdminConfirm == true)
+            {
+                <b>وضعیت : </b> <b class="text-success">منتشر و تایید شده </b>
+            }
+            else
+            {
+                <b>وضعیت : </b> <b class="text-danger">در انتظار تایید </b>
+            }
+            <br />
+            <button class="btn btn-danger btn-xs"><small>&times;</small> <b>لغو انتشار فروشگاه</b></button>
+        </div>
+        <div class="col-sm-7"></div>
+
+
+
+    </div>
+
+<br />
+<div class="tab-bar">
+    <div class="container">
+        <ul class="nav nav-tabs pull-right">
+
+            <li class="pull-left">
+                <a href="/controlpanel/basedataaddstore"><small class="a">اطلاعات</small></a>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/complatedataaddstore"><small class="a">اطلاعات تکمیلی</small></a>
+            </li>
+            <li class="active pull-left">
+                <a href="/controlpanel/imgandvideoaddstore"><small class="a"> تصاویر و تیزر</small></a>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/selectlocation"><small class="a">نقشه</small></a>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/commentmanagmentaddstore"><small class="a">مدیریت کامنت های فروشگاه 5</small></a>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+<br />
+<div class="row">
+   <div class="col-sm-1"></div>
+    <div class="col-sm-5 text-center">
+      
+        <div class="alert-success" id="divSuccessInsertImages">@TempData["msgStoreImages"]</div>
+      <div class="card-container padded">
+          <label style="font-size:x-small" class="text-center">اضافه کردن تصاویر فروشگاه </label><br />
+          <button class="btn btn-bazaar btn-lg pull-left" id="btnadd" type="button" style="font-size:large">+</button>
+          <br />
+          <br />
+          <br />
+          <form action="/controlpanel/GetDataAddStorePart9Images" method="post"enctype="multipart/form-data">
+              <div class="form-group" id="divaddtxtfile">
+                  <input class="form-control" name="img" typeof="image/*" type="file" id="txtfile"/>
+              </div>
+
+
+              <br />
+              <button class="btn btn-bazaar" id="btnInsertImage">ذخیره اطلاعات</button>
+          </form>
+      </div>
+   
+        </div>
+    <div class="alert-success" id="divSuccessVidoeLink">@TempData["msgStoreVideo"]</div>
+    <div class="col-sm-5 text-center"style="background-color:white">
+        <br />
+     <div class="card-container padded">
+         <div class="form-group form-inline text-center">
+             در صورتی که از قبل تیزر تبلیغاتی تهیه کردید میتوانید لینک آپارات ویدیو را وارد نمایید
+             <br />
+             <br />
+             
+             <form action="/controlpanel/GetDataAddStorePart10VideoLink" method="post">
+                 <input value="@item.Video" class="form-control"name="video" placeholder="Example : www.aparat.ir?sdpokdpodpo" style="width:70%" dir="ltr" /> <span style="padding-right:3%"></span><button class="btn btn-bazaar btn-md"id="btnInsertVideoLink">ذخیره اطلاعات</button>
+
+             </form>
+             <br />
+
+
+             <video controls="controls" loop width="500" height="300" class="text-center">
+                 <source src="@item.Video" type="video/mpeg" />
+             </video>
+
+             <br />
+             <p class="text-danger">
+                 نکته : تیرز تبلیاتی شما در سیستم ذخیره می شود در صورتی قابل مشاهده خواهد بود که از پلن   <span class="text-primary">ویژه </span>استفاده کنید
+             </p>
+
+         </div>
+     </div>
+    </div>
+
+
+      
+  
+    <div class="col-sm-1"></div>
+</div>
+    <div class="text-center">
+        <h4>تصاویر فروشگاه شما</h4>
+    </div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 text-center">
+
+
+        <div class="card-container padded"id="divgetimage">
+            @using CheshmebazarIrMyProject.Models
+           
+            @foreach (var item1 in ViewBag.getimg as IEnumerable<sp_getallimages_Result>)
+            {
+                <div class="bbb pull-right" style="width:15%"id="divgetandshowimg">
+
+
+                    <div class="img">
+                        <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item1.Pic)}")" alt="@item.Name" class="placeholder img-responsive">
+                    </div>
+                    <br />
+                   
+                    <button class="btn btn-danger" type="button"  id="btndeleteimage" value="@item1.Id">حذف تصویر</button>
+
+
+
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="col-sm-1"></div>
+</div>
+
+}
+
+
+<script src="~/Template/js/jquery-2.js"></script>
+<script>
+    
+   
+</script>
+ 
+<script>
+    $("div").delegate('#btndeleteimage', 'click', function () {
+        var tr = $(this).parent();
+        jQuery.post('/controlpanel/DeleteImagesAndShowAddStore', { id: $(this).val() }, function () {
+            $(tr).remove()
+        })
+    })
+    </script>
+<script>
+   
+    $(btnadd).click(function () {
+        txtfile.files != null;
+        $(divaddtxtfile).append('<input name="img" typeof="image/*" class="form-control"type="file" id="txtfile"/>')
+
+        $(btninsertvideolink).click(function () {
+            btnInsertVideoLink.textContent='در حال ذخیره اطلاعات ...'
+        })
+
+    })
+    $(btnInsertImage).click(function () {
+        this.textContent='در حال ذخیره اطلاعات ...'
+    })
+  
+
+</script>
+

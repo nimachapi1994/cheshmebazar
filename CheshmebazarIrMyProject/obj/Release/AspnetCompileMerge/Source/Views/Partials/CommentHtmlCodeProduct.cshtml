@@ -1,0 +1,62 @@
+﻿<br />
+
+@foreach (var item in ViewBag.showproductsComment as IEnumerable<CheshmebazarIrMyProject.Models.PCommentOK>)
+{
+    <div class="pull-right">
+
+        @if (item.NameAndFname == null)
+        {
+            <label>ناشناس</label>
+        }
+        else
+        {
+            <label>@item.NameAndFname</label>
+        }
+
+        <label>@item.Date</label>
+
+        <button class="btn btn-group-xs btn-primary" disabled>+</button>
+        <label>3</label>
+
+        <button class="btn btn-group-xs btn-danger" disabled>-</button>
+        <label>2</label>
+    </div>
+
+        <br />
+        <hr />
+
+        <div class="cr" style="color:black;background-color:white">
+
+
+            <p>
+                @item.Txt
+            </p>            <br />
+
+
+        </div>
+}
+
+
+
+
+
+
+<br />
+@*// Get Comments...*@
+
+<form action="/store/GetCommentForProduct" method="post">
+    <div>
+        <label>ارسال نظر</label>
+        <br />
+        <input name="NameAndFname" id="txtName" placeholder="نام" width="150" /><input id="txtEmail" name="Email" placeholder="ایمیل" />
+        <br /><br />
+
+        <br />
+        <textarea style="width:50%;height:20%" name="txt" placeholder="متن فارسی" id="txtText"></textarea>
+        <br />
+        <button class="btn btn-success btn-sm">ارسال</button>
+
+    </div>
+
+</form>
+

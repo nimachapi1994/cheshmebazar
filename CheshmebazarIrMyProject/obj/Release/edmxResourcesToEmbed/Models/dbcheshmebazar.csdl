@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbCheshmeBazarIrMyProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DbCheshmeBazarIrMyProjectOkey" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="DeleteChildCategory">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteParentCategory">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getcategorychild" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.getcategorychild_Result)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getCompateDataControlPanel" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.getCompateDataControlPanel_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ShowCompaleStore" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.ShowCompaleStore_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ShowOneProduct" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.ShowOneProduct_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_AddProductPartFirst">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="logo" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_AdminDeleteStore">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_AdminStoreConfirm">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeletesliderImageStore">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_DeleteStorePart7GetImages">
+      <Parameter Name="img" Mode="In" Type="Binary" />
+      <Parameter Name="store_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getallimages" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.sp_getallimages_Result)">
+      <Parameter Name="user_id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_InsertStorePart7GetImages">
+      <Parameter Name="img" Mode="In" Type="Binary" />
+      <Parameter Name="store_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StoreUpdate_keywords_Part6">
+      <Parameter Name="keywords" Mode="In" Type="String" />
+      <Parameter Name="store_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StoreUpdate_phonenumber_part4">
+      <Parameter Name="website" Mode="In" Type="String" />
+      <Parameter Name="phoneone" Mode="In" Type="String" />
+      <Parameter Name="phonetwo" Mode="In" Type="String" />
+      <Parameter Name="phonethree" Mode="In" Type="String" />
+      <Parameter Name="mobile" Mode="In" Type="String" />
+      <Parameter Name="store_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StoreUpdate_social_Part5">
+      <Parameter Name="facebook" Mode="In" Type="String" />
+      <Parameter Name="googlelplus" Mode="In" Type="String" />
+      <Parameter Name="linkedin" Mode="In" Type="String" />
+      <Parameter Name="instagram" Mode="In" Type="String" />
+      <Parameter Name="twitter" Mode="In" Type="String" />
+      <Parameter Name="telegramchannel" Mode="In" Type="String" />
+      <Parameter Name="whatsup" Mode="In" Type="String" />
+      <Parameter Name="storeid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StoreUpdatebaseinfo_mottoandtext_Part2">
+      <Parameter Name="txt" Mode="In" Type="String" />
+      <Parameter Name="motto" Mode="In" Type="String" />
+      <Parameter Name="chilgategory_id" Mode="In" Type="Int32" />
+      <Parameter Name="parentgategory_id" Mode="In" Type="Int32" />
+      <Parameter Name="storeid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StoreUpdateComplatedata_Cityproviance_part3">
+      <Parameter Name="province" Mode="In" Type="String" />
+      <Parameter Name="postalcode" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="store_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StoreUpdateDiscount">
+      <Parameter Name="startdate" Mode="In" Type="String" />
+      <Parameter Name="enddate" Mode="In" Type="String" />
+      <Parameter Name="perdis" Mode="In" Type="Int32" />
+      <Parameter Name="storeid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StoreUpdatePartGetVideoLinkString">
+      <Parameter Name="videolink" Mode="In" Type="String" />
+      <Parameter Name="store_Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StoreUpdatePartmakestorePart1">
+      <Parameter Name="managmentname" Mode="In" Type="String" />
+      <Parameter Name="storename" Mode="In" Type="String" />
+      <Parameter Name="logo" Mode="In" Type="Binary" />
+      <Parameter Name="visitlink" Mode="In" Type="String" />
+      <Parameter Name="storeid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_UpdateStorePart7GetImages">
+      <Parameter Name="img" Mode="In" Type="Binary" />
+      <Parameter Name="store_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="update123">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_GetProductsComment">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="txt" Mode="In" Type="String" />
+      <Parameter Name="product_id" Mode="In" Type="Int32" />
+      <Parameter Name="mail" Mode="In" Type="String" />
+      <Parameter Name="AdminConfirm" Mode="In" Type="Boolean" />
+      <Parameter Name="commentdate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="PCommentOKs" EntityType="DbCheshmeBazarIrMyProjectModel.PCommentOK" />
+    <FunctionImport Name="sp_ShowStoreComments" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.sp_ShowStoreComments_Result)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ShowMsgCustomerToStore" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.sp_ShowMsgCustomerToStore_Result)">
+      <Parameter Name="i" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="C__MigrationHistory" EntityType="DbCheshmeBazarIrMyProjectModel.C__MigrationHistory" />
+    <EntitySet Name="AspNetRoles" EntityType="DbCheshmeBazarIrMyProjectModel.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="DbCheshmeBazarIrMyProjectModel.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="DbCheshmeBazarIrMyProjectModel.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="DbCheshmeBazarIrMyProjectModel.AspNetUser" />
+    <EntitySet Name="CategoryChilds" EntityType="DbCheshmeBazarIrMyProjectModel.CategoryChild" />
+    <EntitySet Name="CategoryParents" EntityType="DbCheshmeBazarIrMyProjectModel.CategoryParent" />
+    <EntitySet Name="Cities" EntityType="DbCheshmeBazarIrMyProjectModel.City" />
+    <EntitySet Name="MsgToStores" EntityType="DbCheshmeBazarIrMyProjectModel.MsgToStore" />
+    <EntitySet Name="Packages" EntityType="DbCheshmeBazarIrMyProjectModel.Package" />
+    <EntitySet Name="Products" EntityType="DbCheshmeBazarIrMyProjectModel.Product" />
+    <EntitySet Name="PurchaseCarts" EntityType="DbCheshmeBazarIrMyProjectModel.PurchaseCart" />
+    <EntitySet Name="SComments" EntityType="DbCheshmeBazarIrMyProjectModel.SComment" />
+    <EntitySet Name="SliderForProducts" EntityType="DbCheshmeBazarIrMyProjectModel.SliderForProduct" />
+    <EntitySet Name="SliderForStores" EntityType="DbCheshmeBazarIrMyProjectModel.SliderForStore" />
+    <EntitySet Name="Stores" EntityType="DbCheshmeBazarIrMyProjectModel.Store" />
+    <EntitySet Name="sysdiagrams" EntityType="DbCheshmeBazarIrMyProjectModel.sysdiagram" />
+    <EntitySet Name="WorkHours" EntityType="DbCheshmeBazarIrMyProjectModel.WorkHour" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="DbCheshmeBazarIrMyProjectModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="DbCheshmeBazarIrMyProjectModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryChild_CategoryParent" Association="DbCheshmeBazarIrMyProjectModel.FK_CategoryChild_CategoryParent">
+      <End Role="CategoryParent" EntitySet="CategoryParents" />
+      <End Role="CategoryChild" EntitySet="CategoryChilds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stores_CategoryChild" Association="DbCheshmeBazarIrMyProjectModel.FK_Stores_CategoryChild">
+      <End Role="CategoryChild" EntitySet="CategoryChilds" />
+      <End Role="Store" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stores_CategoryParent" Association="DbCheshmeBazarIrMyProjectModel.FK_Stores_CategoryParent">
+      <End Role="CategoryParent" EntitySet="CategoryParents" />
+      <End Role="Store" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MsgToStores_Stores" Association="DbCheshmeBazarIrMyProjectModel.FK_MsgToStores_Stores">
+      <End Role="Store" EntitySet="Stores" />
+      <End Role="MsgToStore" EntitySet="MsgToStores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PCommentOK_Products" Association="DbCheshmeBazarIrMyProjectModel.FK_PCommentOK_Products">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="PCommentOK" EntitySet="PCommentOKs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Stores" Association="DbCheshmeBazarIrMyProjectModel.FK_Products_Stores">
+      <End Role="Store" EntitySet="Stores" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SliderForProducts_Products" Association="DbCheshmeBazarIrMyProjectModel.FK_SliderForProducts_Products">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="SliderForProduct" EntitySet="SliderForProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseCart_Stores" Association="DbCheshmeBazarIrMyProjectModel.FK_PurchaseCart_Stores">
+      <End Role="Store" EntitySet="Stores" />
+      <End Role="PurchaseCart" EntitySet="PurchaseCarts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SComments_Stores" Association="DbCheshmeBazarIrMyProjectModel.FK_SComments_Stores">
+      <End Role="Store" EntitySet="Stores" />
+      <End Role="SComment" EntitySet="SComments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SliderForStores_Stores" Association="DbCheshmeBazarIrMyProjectModel.FK_SliderForStores_Stores">
+      <End Role="Store" EntitySet="Stores" />
+      <End Role="SliderForStore" EntitySet="SliderForStores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkHours_Stores" Association="DbCheshmeBazarIrMyProjectModel.FK_WorkHours_Stores">
+      <End Role="Store" EntitySet="Stores" />
+      <End Role="WorkHour" EntitySet="WorkHours" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="DbCheshmeBazarIrMyProjectModel.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <EntitySet Name="MsgCustomerToAdmins" EntityType="DbCheshmeBazarIrMyProjectModel.MsgCustomerToAdmin" />
+    <FunctionImport Name="sm_ShowDicountStores" ReturnType="Collection(DbCheshmeBazarIrMyProjectModel.sm_ShowDicountStores_Result)" />
+  </EntityContainer>
+  <ComplexType Name="getcategorychild_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Parent_Id" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getCompateDataControlPanel_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ManagmentName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Create_date" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="TotalVistor" Nullable="true" />
+    <Property Type="String" Name="Motto" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Rate" Nullable="true" />
+    <Property Type="String" Name="KeyWords" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Txt" Nullable="true" MaxLength="4000" />
+    <Property Type="Binary" Name="QrCode" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="WebSite" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PhoneOne" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="Province" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PostalCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="AdminConfirm" Nullable="true" />
+    <Property Type="String" Name="User_id" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Like" Nullable="true" />
+    <Property Type="Int32" Name="Dislike" Nullable="true" />
+    <Property Type="Binary" Name="Logo" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="PhoneTwo" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="PhoneThree" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="VisitLink" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Video" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="TelegramChannel" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Facebook" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="GooglePlus" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LikedIn" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Instagram" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Twitter" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ChildCategory_Id" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategory_Id" Nullable="true" />
+    <Property Type="Int32" Name="DiscountPrice" Nullable="true" />
+    <Property Type="Int32" Name="DiscountPersend" Nullable="true" />
+    <Property Type="String" Name="StartDate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ExpiredDate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Whsup" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="EditDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="ShowCompaleStore_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ManagmentName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Create_date" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="TotalVistor" Nullable="true" />
+    <Property Type="String" Name="Motto" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Rate" Nullable="true" />
+    <Property Type="String" Name="KeyWords" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Txt" Nullable="true" MaxLength="4000" />
+    <Property Type="Binary" Name="QrCode" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="WebSite" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PhoneOne" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="Province" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PostalCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="AdminConfirm" Nullable="true" />
+    <Property Type="String" Name="User_id" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Like" Nullable="true" />
+    <Property Type="Int32" Name="Dislike" Nullable="true" />
+    <Property Type="Binary" Name="Logo" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="PhoneTwo" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="PhoneThree" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="VisitLink" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Video" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="TelegramChannel" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Facebook" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="GooglePlus" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LikedIn" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Instagram" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Twitter" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ChildCategory_Id" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategory_Id" Nullable="true" />
+    <Property Type="Int32" Name="DiscountPrice" Nullable="true" />
+    <Property Type="Int32" Name="DiscountPersend" Nullable="true" />
+    <Property Type="String" Name="StartDate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ExpiredDate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Whsup" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="EditDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="ShowOneProduct_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Txt" Nullable="true" MaxLength="4000" />
+    <Property Type="Binary" Name="Logo" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="Price" Nullable="true" />
+    <Property Type="String" Name="KeyWords" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="AdminConfirm" Nullable="true" />
+    <Property Type="Int32" Name="Store_Id" Nullable="true" />
+    <Property Type="Int32" Name="Like" Nullable="true" />
+    <Property Type="Int32" Name="DiscountPesend" Nullable="true" />
+    <Property Type="Decimal" Name="OfPrice" Nullable="true" Precision="19" />
+    <Property Type="DateTime" Name="StartDateDiscount" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExpiredDateDiscount" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="TotalVisitors" Nullable="true" />
+    <Property Type="DateTime" Name="Create_Date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Edit_Date" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_getallimages_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Store_Id" Nullable="true" />
+    <Property Type="Binary" Name="Pic" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="PCommentOK">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameAndFname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdminConfirm" Type="Boolean" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Product_Id" Type="Int32" />
+    <Property Name="Txt" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="DbCheshmeBazarIrMyProjectModel.FK_PCommentOK_Products" FromRole="PCommentOK" ToRole="Product" />
+  </EntityType>
+  <ComplexType Name="sp_ShowStoreComments_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Txt" Nullable="true" MaxLength="2000" />
+    <Property Type="Int32" Name="Store_Id" Nullable="true" />
+    <Property Type="Boolean" Name="AdminConfirm" Nullable="true" />
+    <Property Type="String" Name="NameAndFname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_ShowMsgCustomerToStore_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Family" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmailorPhoneNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Txt" Nullable="true" MaxLength="4000" />
+    <Property Type="Int32" Name="Store_Id" Nullable="true" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="DbCheshmeBazarIrMyProjectModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="DbCheshmeBazarIrMyProjectModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="DbCheshmeBazarIrMyProjectModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="DbCheshmeBazarIrMyProjectModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="DbCheshmeBazarIrMyProjectModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+    <NavigationProperty Name="AspNetRoles" Relationship="DbCheshmeBazarIrMyProjectModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="CategoryChild">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Parent_Id" Type="Int32" />
+    <NavigationProperty Name="CategoryParent" Relationship="DbCheshmeBazarIrMyProjectModel.FK_CategoryChild_CategoryParent" FromRole="CategoryChild" ToRole="CategoryParent" />
+    <NavigationProperty Name="Stores" Relationship="DbCheshmeBazarIrMyProjectModel.FK_Stores_CategoryChild" FromRole="CategoryChild" ToRole="Store" />
+  </EntityType>
+  <EntityType Name="CategoryParent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CategoryChilds" Relationship="DbCheshmeBazarIrMyProjectModel.FK_CategoryChild_CategoryParent" FromRole="CategoryParent" ToRole="CategoryChild" />
+    <NavigationProperty Name="Stores" Relationship="DbCheshmeBazarIrMyProjectModel.FK_Stores_CategoryParent" FromRole="CategoryParent" ToRole="Store" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MsgToStore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailorPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Txt" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Store_Id" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Store" Relationship="DbCheshmeBazarIrMyProjectModel.FK_MsgToStores_Stores" FromRole="MsgToStore" ToRole="Store" />
+  </EntityType>
+  <EntityType Name="Package">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PackageMonth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PayAmount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Txt" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="KeyWords" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AdminConfirm" Type="Boolean" />
+    <Property Name="Store_Id" Type="Int32" />
+    <Property Name="Like" Type="Int32" />
+    <Property Name="DiscountPesend" Type="Int32" />
+    <Property Name="OfPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StartDateDiscount" Type="DateTime" Precision="3" />
+    <Property Name="ExpiredDateDiscount" Type="DateTime" Precision="3" />
+    <Property Name="TotalVisitors" Type="Int32" />
+    <Property Name="Create_Date" Type="DateTime" Precision="3" />
+    <Property Name="Edit_Date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="PCommentOKs" Relationship="DbCheshmeBazarIrMyProjectModel.FK_PCommentOK_Products" FromRole="Product" ToRole="PCommentOK" />
+    <NavigationProperty Name="Store" Relationship="DbCheshmeBazarIrMyProjectModel.FK_Products_Stores" FromRole="Product" ToRole="Store" />
+    <NavigationProperty Name="SliderForProducts" Relationship="DbCheshmeBazarIrMyProjectModel.FK_SliderForProducts_Products" FromRole="Product" ToRole="SliderForProduct" />
+  </EntityType>
+  <EntityType Name="PurchaseCart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Store_Id" Type="Int32" />
+    <Property Name="Package_Id" Type="Int32" />
+    <Property Name="DateOfPay" Type="DateTime" Precision="3" />
+    <Property Name="IsPayed" Type="Boolean" />
+    <Property Name="ExpiredDate" Type="DateTime" Precision="3" />
+    <Property Name="User_Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Token" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Store" Relationship="DbCheshmeBazarIrMyProjectModel.FK_PurchaseCart_Stores" FromRole="PurchaseCart" ToRole="Store" />
+  </EntityType>
+  <EntityType Name="SComment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Txt" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Store_Id" Type="Int32" />
+    <Property Name="AdminConfirm" Type="Boolean" />
+    <Property Name="NameAndFname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Store" Relationship="DbCheshmeBazarIrMyProjectModel.FK_SComments_Stores" FromRole="SComment" ToRole="Store" />
+  </EntityType>
+  <EntityType Name="SliderForProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_Id" Type="Int32" />
+    <Property Name="pic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Product" Relationship="DbCheshmeBazarIrMyProjectModel.FK_SliderForProducts_Products" FromRole="SliderForProduct" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="SliderForStore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Store_Id" Type="Int32" />
+    <Property Name="Pic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Store" Relationship="DbCheshmeBazarIrMyProjectModel.FK_SliderForStores_Stores" FromRole="SliderForStore" ToRole="Store" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ManagmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Create_date" Type="DateTime" Precision="3" />
+    <Property Name="TotalVistor" Type="Int32" />
+    <Property Name="Motto" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Rate" Type="Int32" />
+    <Property Name="KeyWords" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Txt" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="QrCode" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneOne" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdminConfirm" Type="Boolean" />
+    <Property Name="User_id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Like" Type="Int32" />
+    <Property Name="Dislike" Type="Int32" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Location" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PhoneTwo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneThree" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="VisitLink" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Video" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TelegramChannel" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GooglePlus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LikedIn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Instagram" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Twitter" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ChildCategory_Id" Type="Int32" />
+    <Property Name="ParentCategory_Id" Type="Int32" />
+    <Property Name="DiscountPrice" Type="Int32" />
+    <Property Name="DiscountPersend" Type="Int32" />
+    <Property Name="StartDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExpiredDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Whsup" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="EditDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CategoryChild" Relationship="DbCheshmeBazarIrMyProjectModel.FK_Stores_CategoryChild" FromRole="Store" ToRole="CategoryChild" />
+    <NavigationProperty Name="CategoryParent" Relationship="DbCheshmeBazarIrMyProjectModel.FK_Stores_CategoryParent" FromRole="Store" ToRole="CategoryParent" />
+    <NavigationProperty Name="MsgToStores" Relationship="DbCheshmeBazarIrMyProjectModel.FK_MsgToStores_Stores" FromRole="Store" ToRole="MsgToStore" />
+    <NavigationProperty Name="Products" Relationship="DbCheshmeBazarIrMyProjectModel.FK_Products_Stores" FromRole="Store" ToRole="Product" />
+    <NavigationProperty Name="PurchaseCarts" Relationship="DbCheshmeBazarIrMyProjectModel.FK_PurchaseCart_Stores" FromRole="Store" ToRole="PurchaseCart" />
+    <NavigationProperty Name="SComments" Relationship="DbCheshmeBazarIrMyProjectModel.FK_SComments_Stores" FromRole="Store" ToRole="SComment" />
+    <NavigationProperty Name="SliderForStores" Relationship="DbCheshmeBazarIrMyProjectModel.FK_SliderForStores_Stores" FromRole="Store" ToRole="SliderForStore" />
+    <NavigationProperty Name="WorkHours" Relationship="DbCheshmeBazarIrMyProjectModel.FK_WorkHours_Stores" FromRole="Store" ToRole="WorkHour" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="WorkHour">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShiftOneStart0" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="shiftOneEnd0" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShiftTwoStart0" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShiftTwoEnd0" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShiftOneStart1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="shiftOneEnd1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoStart1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoEnd1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftOneStart2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="shiftOneEnd2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoStart2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoEnd2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftOneStart3" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="shiftOneEnd3" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoStart3" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoEnd3" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftOneStart4" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="shiftOneEnd4" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoStart4" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoEnd4" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftOneStart5" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="shiftOneEnd5" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoStart5" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoEnd5" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftOneStart6" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="shiftOneEnd6" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoStart6" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ShiftTwoEnd6" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Store_Id" Type="Int32" />
+    <NavigationProperty Name="Store" Relationship="DbCheshmeBazarIrMyProjectModel.FK_WorkHours_Stores" FromRole="WorkHour" ToRole="Store" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Type="DbCheshmeBazarIrMyProjectModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DbCheshmeBazarIrMyProjectModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Type="DbCheshmeBazarIrMyProjectModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DbCheshmeBazarIrMyProjectModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryChild_CategoryParent">
+    <End Type="DbCheshmeBazarIrMyProjectModel.CategoryParent" Role="CategoryParent" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.CategoryChild" Role="CategoryChild" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryParent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CategoryChild">
+        <PropertyRef Name="Parent_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stores_CategoryChild">
+    <End Type="DbCheshmeBazarIrMyProjectModel.CategoryChild" Role="CategoryChild" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.Store" Role="Store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryChild">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Store">
+        <PropertyRef Name="ChildCategory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stores_CategoryParent">
+    <End Type="DbCheshmeBazarIrMyProjectModel.CategoryParent" Role="CategoryParent" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.Store" Role="Store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryParent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Store">
+        <PropertyRef Name="ParentCategory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MsgToStores_Stores">
+    <End Type="DbCheshmeBazarIrMyProjectModel.Store" Role="Store" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.MsgToStore" Role="MsgToStore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MsgToStore">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PCommentOK_Products">
+    <End Type="DbCheshmeBazarIrMyProjectModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.PCommentOK" Role="PCommentOK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PCommentOK">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Stores">
+    <End Type="DbCheshmeBazarIrMyProjectModel.Store" Role="Store" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SliderForProducts_Products">
+    <End Type="DbCheshmeBazarIrMyProjectModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.SliderForProduct" Role="SliderForProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SliderForProduct">
+        <PropertyRef Name="product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseCart_Stores">
+    <End Type="DbCheshmeBazarIrMyProjectModel.Store" Role="Store" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.PurchaseCart" Role="PurchaseCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseCart">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SComments_Stores">
+    <End Type="DbCheshmeBazarIrMyProjectModel.Store" Role="Store" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.SComment" Role="SComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SComment">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SliderForStores_Stores">
+    <End Type="DbCheshmeBazarIrMyProjectModel.Store" Role="Store" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.SliderForStore" Role="SliderForStore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SliderForStore">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkHours_Stores">
+    <End Type="DbCheshmeBazarIrMyProjectModel.Store" Role="Store" Multiplicity="0..1" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.WorkHour" Role="WorkHour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WorkHour">
+        <PropertyRef Name="Store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="DbCheshmeBazarIrMyProjectModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="DbCheshmeBazarIrMyProjectModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityType Name="MsgCustomerToAdmin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Txt" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="Datee" Type="DateTime" Precision="0" />
+  </EntityType>
+  <ComplexType Name="sm_ShowDicountStores_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ManagmentName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Create_date" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="TotalVistor" Nullable="true" />
+    <Property Type="String" Name="Motto" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Rate" Nullable="true" />
+    <Property Type="String" Name="KeyWords" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Txt" Nullable="true" MaxLength="4000" />
+    <Property Type="Binary" Name="QrCode" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="WebSite" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PhoneOne" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="Province" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PostalCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="AdminConfirm" Nullable="true" />
+    <Property Type="String" Name="User_id" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Like" Nullable="true" />
+    <Property Type="Int32" Name="Dislike" Nullable="true" />
+    <Property Type="Binary" Name="Logo" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="PhoneTwo" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="PhoneThree" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="VisitLink" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Video" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="TelegramChannel" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Facebook" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="GooglePlus" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LikedIn" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Instagram" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Twitter" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ChildCategory_Id" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategory_Id" Nullable="true" />
+    <Property Type="Int32" Name="DiscountPrice" Nullable="true" />
+    <Property Type="Int32" Name="DiscountPersend" Nullable="true" />
+    <Property Type="String" Name="StartDate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ExpiredDate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Whsup" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="EditDate" Nullable="true" Precision="23" />
+  </ComplexType>
+</Schema>

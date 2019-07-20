@@ -1,0 +1,210 @@
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\csc.exe
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\System.Collections.Immutable.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\System.Reflection.Metadata.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\vbc.exe
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\VBCSCompiler.exe
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\VBCSCompiler.exe.config
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\CheshmebazarIrMyProject.dll.config
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\CheshmebazarIrMyProject.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\CheshmebazarIrMyProject.pdb
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Antlr3.Runtime.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.SqlServer.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Core.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Cookies.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Facebook.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Google.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.OAuth.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Twitter.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Web.Infrastructure.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Newtonsoft.Json.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Owin.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Helpers.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Mvc.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Optimization.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Razor.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Deployment.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Razor.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\WebGrease.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Antlr3.Runtime.pdb
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.SqlServer.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Core.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Cookies.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Facebook.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Google.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.OAuth.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Twitter.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Newtonsoft.Json.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Optimization.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Razor.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Deployment.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Razor.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Helpers.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Mvc.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.csprojResolveAssemblyReference.cache
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Dir\Backup\ver 2\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.pdb
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.csprojResolveAssemblyReference.cache
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.pdb
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\csc.exe
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\System.Collections.Immutable.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\System.Reflection.Metadata.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\vbc.exe
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\VBCSCompiler.exe
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\VBCSCompiler.exe.config
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\CheshmebazarIrMyProject.dll.config
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\CheshmebazarIrMyProject.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\CheshmebazarIrMyProject.pdb
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Antlr3.Runtime.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.SqlServer.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Core.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Cookies.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Facebook.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Google.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.OAuth.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Twitter.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Web.Infrastructure.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Newtonsoft.Json.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Owin.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Helpers.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Mvc.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Optimization.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Razor.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Deployment.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Razor.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\WebGrease.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Antlr3.Runtime.pdb
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.SqlServer.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Core.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Cookies.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Facebook.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Google.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.OAuth.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Twitter.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Newtonsoft.Json.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Optimization.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Razor.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Deployment.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Razor.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Helpers.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Mvc.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\csc.exe
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\System.Collections.Immutable.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\System.Reflection.Metadata.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\vbc.exe
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\VBCSCompiler.exe
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\roslyn\VBCSCompiler.exe.config
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\CheshmebazarIrMyProject.dll.config
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\CheshmebazarIrMyProject.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\CheshmebazarIrMyProject.pdb
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Antlr3.Runtime.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.SqlServer.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Core.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Cookies.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Facebook.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Google.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.OAuth.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Twitter.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Web.Infrastructure.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Newtonsoft.Json.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Owin.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Helpers.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Mvc.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Optimization.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Razor.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Deployment.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Razor.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\WebGrease.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Antlr3.Runtime.pdb
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\EntityFramework.SqlServer.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Core.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Cookies.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Facebook.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Google.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.OAuth.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Microsoft.Owin.Security.Twitter.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\Newtonsoft.Json.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Optimization.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Razor.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Deployment.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Webpages.Razor.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Helpers.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\bin\System.Web.Mvc.xml
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.csprojResolveAssemblyReference.cache
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Project\test\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.pdb
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Source\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.csprojResolveAssemblyReference.cache
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Source\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.dll
+E:\NimaIsDeveloper\Projects\MystartUpsProject\CheshmeBazar\Source\CheshmebazarIrMyProject\CheshmebazarIrMyProject\obj\Debug\CheshmebazarIrMyProject.pdb

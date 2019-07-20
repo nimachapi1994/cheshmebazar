@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "AdminProductsManagment";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>مدیریت تمام محصولات</h2>
+<div class="form-group">
+    <input class="form-control" placeholder="search Products" />
+    <button class="btn btn-success">جستجو</button>
+</div>
+<div id="DivThisProviderProducts">
+
+    <section class="box-list">
+        <div class="container">
+            <div class="container-wrapper">
+              
+                <div class="row row16px sw-wrapper">
+                  
+                    @foreach (var item in ViewBag.showNotConfirmProducts as IEnumerable<CheshmebazarIrMyProject.Models.Product>)
+                    {
+                        <div class="col col-lg-2 col-md-3 col-sm-4 col-xs-6 sw-slide">
+                            <div class="box">
+                                <a class="ad-box" title="@item.Name" href="" target="_blank">
+                                    <h4 class="title">@item.Name</h4>
+
+                                    <a href="/admin/AdminShowproduct?id=@(item.Id)" class="btn btn-primary" style="color:black">مشاهده</a>
+                                </a>
+
+                            </div>
+                        </div>      
+                    }
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+

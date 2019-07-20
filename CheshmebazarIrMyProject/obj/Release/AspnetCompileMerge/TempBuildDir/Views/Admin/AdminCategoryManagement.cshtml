@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewBag.Title = "AdminCategoryManagement";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<body id="bd">
+</body>
+<h2 style="color:darkmagenta;margin:auto">مدیریت دسته بندی های سایت</h2>
+@if (TempData["msg"] != null)
+{
+
+
+
+    <div class="alert-success">
+        @TempData["msg"]
+    </div>
+
+
+}
+<form action="/CategoryManament/GetParentCategoryAndAddToDb" method="post">
+    <div class="form-group">
+        <label for="txtinsertparentcategory"style="color:darkmagenta;margin:auto">دسته بندی پدر را وارد نمایید</label>
+        <input class="form-control" name="name" />
+    </div>
+    <button class="btn btn-success">ذخیره</button>
+</form>
+<hr />
+
+
+
+<script src="~/Template/js/jquery-2.js"></script>
+
+
+
+
+
+
+
+
+<div id="divshowinsert">
+    <h3 style="color:darkmagenta;margin:auto"> آپدیت کردن دسته بندی ها</h3>
+
+    <form action="/CategoryManament/GetChildCategoryAndAddToDb" method="post">
+        <div class="form-group">
+            <select class="form-control" name="id" id="slc1">
+                @foreach (var item in ViewBag.d as IEnumerable<CheshmebazarIrMyProject.Models.CategoryParent>)
+            {
+                    <option value="@item.Id">@item.Name</option>
+
+                }
+            </select>
+        </div>
+        <h3>دسته بندی های پسر را وارد نمایید</h3>
+        <div class="form-group">
+            <button class="btn btn-success" type="button" id="btnadd1">+</button>
+            <br />
+            <div class="form-group form-inline" id="divadd1">
+
+
+            </div>
+
+        </div>
+        <button class="btn btn-success">ذخیره </button>
+    </form>
+
+    <script>
+    $(slc1).change(function () {
+        $(divadd1).html('');
+        var idd = this.value;
+        jQuery.post('/CategoryManament/ShowCategoryByJsonId', { id: idd }, function (ex,d) {
+            $(ex).each(function (idx, p) {
+                $(divadd1).append(' <input  value="' + p.name + '"readonly class="form-control" />')
+
+            })
+
+
+        })
+    })
+    btnadd1.onclick = function () {
+        $(divadd1).append(' <input class="form-control" name="name" />')
+    }
+    </script>
+
+</div>
+
+<h3 style="color:darkmagenta;margin:auto">مشاهده تمام دسته ها در یک نگاه</h3>
+
+
+
+
+
+<table class="table table-bordered table-responsive table-hover" style="background-color:white">
+    <tr>
+        <th>شماره</th>
+        <th>دسته اصلی</th>
+        <th style="color:forestgreen"> عملیات ویرایش</th>
+        <th class="text-primary"> عملیات حذف</th>
+        <th>زیر دسته های موجود</th>
+    </tr>
+    @foreach (var item in ViewBag.d as IEnumerable<CheshmebazarIrMyProject.Models.CategoryParent>)
+    {
+        <tr>
+            @if (ViewBag.dd != item.Id)
+            {
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+
+                <td style="width:7%">
+                    <form action="/admin/AdminCategoryManagement">
+                        <button name="id" value="@item.Id" class="btn btn-success">ویرایش</button>
+                    </form>
+
+
+
+
+                </td>
+                <td style="width:7%">
+                    <form action="/CategoryManament/DeleteParentCategory">
+                        <button name="id" value="@item.Id" class="btn btn-primary">حذف</button>
+                    </form>
+                </td>
+                <td>
+                    <table class="table table-bordered table-responsive table-hover">
+                        <tr>
+                            <th>نام زیر دسته</th>
+                            <th>عملیات ویرایش</th>
+                            <th>حذف</th>
+                        </tr>
+
+                        @foreach (var item2 in item.CategoryChilds)
+                    {
+                            <tr>
+                                @if (ViewBag.r != item2.Id)
+                                {
+                                    <td>@item2.Name</td>
+                                    <td style="width:7%">
+                                        <form action="/admin/AdminCategoryManagement">
+                                            <button name="idd" value="@item2.Id" class="btn btn-success">ویرایش</button>
+                                        </form>
+
+
+
+
+                                    </td>
+                                    <td style="width:7%">
+                                        <form action="/CategoryManament/DeleteChildCategory">
+                                            <button name="id" value="@item2.Id" class="btn btn-danger">حذف</button>
+                                        </form>
+                                    </td>
+                                }
+                                else
+                                {
+                                    <form action="/CategoryManament/UpdateChildCategory">
+                                        <td>
+                                            <div class="form-group">
+                                                <input name="name" value="@item2.Name" class="form-control" placeholder="اسم دسته را وارد کنید" />
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <input value="@item.Id" name="parent_id" hidden="hidden">
+                                            <button name="id" value="@item2.Id" class="btn btn-success">ذخیره</button>
+                                            <button name="id" value="-1" class="btn btn-primary" formaction="/admin/AdminCategoryManagement">
+                                                بی خیال
+                                            </button>
+                                        </td>
+                                    </form>
+                                }
+
+                            </tr>
+                        }
+                    </table>
+                </td>
+            }
+            else
+            {
+                <form action="/CategoryManament/UpdateParentCategory">
+                    <td>
+                        <div class="form-group">
+                            <input name="name" value="@item.Name" class="form-control" placeholder="اسم دسته را وارد کنید" />
+                        </div>
+                    </td>
+
+                    <td>
+                        <button name="id" value="@item.Id" class="btn btn-success">ذخیره</button>
+                        <button name="id" value="-1" class="btn btn-primary" formaction="/admin/AdminCategoryManagement">
+                            بی خیال
+                        </button>
+                    </td>
+                </form>
+            }
+
+        </tr>
+    }
+
+</table>

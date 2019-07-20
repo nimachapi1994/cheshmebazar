@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "AdminActiveStores";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+
+<h4 style="color:green;margin:auto">لیست تمام فروشگاه های پرداخت شده تایید شده </h4>
+
+<div id="sections">
+    <section class="box-list">
+        <div class="container">
+            <div class="container-wrapper">
+
+                <div class="row row16px sw-wrapper">
+                    @{
+                        CheshmebazarIrMyProject.Models.DbCheshmeBazarIrMyProjectok1 db =
+                             new CheshmebazarIrMyProject.Models.DbCheshmeBazarIrMyProjectok1();
+                        var d = db.Stores.ToList().OrderByDescending(x => x.EditDate.Value);
+                    }
+                    @foreach (var item in d as IEnumerable<CheshmebazarIrMyProject.Models.Store>)
+                    {
+
+
+                        if (item.AdminConfirm == true)
+                        {
+
+
+
+                            <div class="col col-lg-2 col-md-3 col-sm-4 col-xs-6 sw-slide">
+                                <div class="box">
+                                    <a class="ad-box" href="" title="StoreName" target="_blank">
+
+
+                                        <h4 class="title">@item.Name</h4>
+                                        <div>
+                                            <a href="/admin/AdminShowStore?id=@(item.Id)" class="btn btn-success" style="color:black">مشاهده فروشگاه</a>
+
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        }
+
+
+
+                    }
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+
+
+
+
+

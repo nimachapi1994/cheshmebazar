@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>پنل ادمین چشم بازار</title>
+    <!-- Bootstrap Core CSS -->
+
+
+    <link href="~/Template/css/bootstrap.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+
+    <link href="~/Template/css/simple-sidebar.css" rel="stylesheet" />
+    <link href="~/Template/css/default.css" rel="stylesheet" />
+    <link href="~/Template/css/bartarinha_font.css" rel="stylesheet" />
+    <link href="~/Template/css/carousel.css" rel="stylesheet" />
+
+
+
+    <script src="~/Template/js/inspectlet.js"></script>
+    <script src="~/Template/js/atrk.js"></script>
+    <script src="~/Template/js/analytics.js"></script>
+    <script src="~/Template/js/jquery-2.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+     
+    <![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       پنل ادمین چشم بازار
+                    </a>
+                </li>
+              
+              <li><a href="/admin/admincontrolpanel" >فروشگاه های منتظر تایید</a></li>
+                <li>
+                    <a href="/admin/AdminActiveStores" style="color:green"> فروشگاه های تایید شده و فعال</a>
+                </li>
+                <li>
+                    <a href="/admin/AdminStoresCommentManagment">مدیریت کامنت فروشگاه ها</a>
+                </li>
+             
+            
+            
+                --------------------------------------------------------------------
+
+                <li>
+                    <a href="/admin/AdminProductsManagment"> محصولات منتظر تایید</a>
+                </li>
+                <li>
+                    <a href="/admin/ShowActiveProduct"style="color:green"> محصولات تایید شده و فعال</a>
+                </li>
+                <li>
+                    <a href="/admin/AdminProductCommentManagment"> کامنت محصولات</a>
+                </li>
+               ----------------------------------------------------------------------
+           
+             
+              
+                <li>
+                    <a href="/MessageCustomerToAdmin/MessageCustomerToAdmin">(پیام مشتریان به ادمین (ارتباط با ما</a>
+                </li>
+                <li>
+                    <a href="/Admin/AdminCategoryManagement">مدیریت دسته بندی ها</a>
+                </li>
+             
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+           @RenderBody()
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+
+    <script src="~/Template/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+
+    <script src="~/Template/js/bootstrap.min.js"></script>
+
+    <script src="~/Template/js/bootstrap.js"></script>
+    <script src="~/Template/js/metisMenu.js"></script>
+    <script src="~/Template/js/bootstrap-select.js"></script>
+    <script src="~/Template/js/typeahead.js"></script>
+    <script src="~/Template/js/validator.js"></script>
+    <script src="~/Template/js/app.js"></script>
+    <script src="~/Template/js/jquery_003.js"></script>
+    <script src="~/Template/js/jquery_002.js"></script>
+    <script src="~/Template/js/jquery.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+</body>
+</html>

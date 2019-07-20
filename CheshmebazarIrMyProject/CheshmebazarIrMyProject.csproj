@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{901087AD-63B2-4512-800F-FEBBED35CDDC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CheshmebazarIrMyProject</RootNamespace>
+    <AssemblyName>CheshmebazarIrMyProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0-alpha1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0-alpha1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0-alpha1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\Validation.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Icons\android.png" />
+    <Content Include="Icons\apple %281%29.png" />
+    <Content Include="Icons\apple %282%29.png" />
+    <EntityDeploy Include="Models\Fooderz.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Fooderz.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Fooderz.edmx.diagram">
+      <DependentUpon>Fooderz.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\Cheshmebazar.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Icons\add.png" />
+    <Content Include="Icons\Category.jpg" />
+    <Content Include="Icons\discount.png" />
+    <Content Include="Icons\facebook.png" />
+    <Content Include="Icons\gmail.png" />
+    <Content Include="Icons\google-plus.png" />
+    <Content Include="Icons\Home.jpg" />
+    <Content Include="Icons\IconMobileProvider.jpg" />
+    <Content Include="Icons\IconProviderPhone.jpg" />
+    <Content Include="Icons\if_telegram_1419139.png" />
+    <Content Include="Icons\if_whatsapp_1419136.png" />
+    <Content Include="Icons\instagram.png" />
+    <Content Include="Icons\left-arrow.png" />
+    <Content Include="Icons\left-chevron.png" />
+    <Content Include="Icons\Like.jpg" />
+    <Content Include="Icons\linkedin.png" />
+    <Content Include="Icons\location-pointer.png" />
+    <Content Include="Icons\Login.jpg" />
+    <Content Include="Icons\new.png" />
+    <Content Include="Icons\Read.jpg" />
+    <Content Include="Icons\right-arrow.png" />
+    <Content Include="Icons\right-chevron.png" />
+    <Content Include="Icons\SideBarCategory.jpg" />
+    <Content Include="Icons\smartphone-call.png" />
+    <Content Include="Icons\telephone-of-old-design.png" />
+    <Content Include="Icons\twitter.png" />
+    <Content Include="Icons\whatsapp-32.png" />
+    <Content Include="Icons\worldwide.png" />
+    <Content Include="Models\Fooderz.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fooderz.edmx</DependentUpon>
+      <LastGenOutput>Fooderz.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Fooderz.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fooderz.edmx</DependentUpon>
+      <LastGenOutput>Fooderz.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Styles\FontStyle.css" />
+    <Content Include="Template\css\bartarinha_font.css" />
+    <Content Include="Template\css\bootstrap.css" />
+    <Content Include="Template\css\bootstrap.min.css" />
+    <Content Include="Template\css\carousel.css" />
+    <Content Include="Template\css\default.css" />
+    <Content Include="Template\css\RegisterLayoutStyles.css" />
+    <Content Include="Template\css\simple-sidebar.css" />
+    <Content Include="Template\css\style.css" />
+    <Content Include="Template\img\2.jpg" />
+    <Content Include="Template\img\2_002.jpg" />
+    <Content Include="Template\img\2_003.jpg" />
+    <Content Include="Template\img\2_004.jpg" />
+    <Content Include="Template\img\2_005.jpg" />
+    <Content Include="Template\img\2_006.jpg" />
+    <Content Include="Template\img\2_007.jpg" />
+    <Content Include="Template\img\2_008.jpg" />
+    <Content Include="Template\img\2_009.jpg" />
+    <Content Include="Template\img\2_010.jpg" />
+    <Content Include="Template\img\2_011.jpg" />
+    <Content Include="Template\img\2_012.jpg" />
+    <Content Include="Template\img\2_013.jpg" />
+    <Content Include="Template\img\2_014.jpg" />
+    <Content Include="Template\img\2_015.jpg" />
+    <Content Include="Template\img\2_016.jpg" />
+    <Content Include="Template\img\2_017.jpg" />
+    <Content Include="Template\img\2_018.jpg" />
+    <Content Include="Template\img\2_019.jpg" />
+    <Content Include="Template\img\2_020.jpg" />
+    <Content Include="Template\img\2_021.jpg" />
+    <Content Include="Template\img\2_022.jpg" />
+    <Content Include="Template\img\2_023.jpg" />
+    <Content Include="Template\img\2_024.jpg" />
+    <Content Include="Template\img\2_025.jpg" />
+    <Content Include="Template\img\2_026.jpg" />
+    <Content Include="Template\img\2_027.jpg" />
+    <Content Include="Template\img\2_028.jpg" />
+    <Content Include="Template\img\2_029.jpg" />
+    <Content Include="Template\img\2_030.jpg" />
+    <Content Include="Template\img\2_031.jpg" />
+    <Content Include="Template\img\2_032.jpg" />
+    <Content Include="Template\img\2_033.jpg" />
+    <Content Include="Template\img\2_034.jpg" />
+    <Content Include="Template\img\2_035.jpg" />
+    <Content Include="Template\img\2_036.jpg" />
+    <Content Include="Template\img\add-people-interface-symbol-of-black-person-close-up-with-plus-sign-in-small-circle.png" />
+    <Content Include="Template\img\ads-placeholder.jpg" />
+    <Content Include="Template\img\article-1-bg.jpg" />
+    <Content Include="Template\img\glasses.png" />
+    <Content Include="Template\img\Location\2_003.jpg" />
+    <Content Include="Template\img\lock.png" />
+    <Content Include="Template\img\logo.png" />
+    <Content Include="Template\img\logo\glasses.png" />
+    <Content Include="Template\img\Proccess\progress.gif" />
+    <Content Include="Template\img\user.png" />
+    <Content Include="Template\js\analytics.js" />
+    <Content Include="Template\js\app.js" />
+    <Content Include="Template\js\atrk.js" />
+    <Content Include="Template\js\bootstrap-select.js" />
+    <Content Include="Template\js\bootstrap.js" />
+    <Content Include="Template\js\bootstrap.min.js" />
+    <Content Include="Template\js\imageuploadify.js" />
+    <Content Include="Template\js\inspectlet.js" />
+    <Content Include="Template\js\jquery-1.10.2.js" />
+    <Content Include="Template\js\jquery-1.10.2.min.js" />
+    <Content Include="Template\js\jquery-2.js" />
+    <Content Include="Template\js\jquery.js" />
+    <Content Include="Template\js\jquery_002.js" />
+    <Content Include="Template\js\jquery_003.js" />
+    <Content Include="Template\js\metisMenu.js" />
+    <Content Include="Template\js\typeahead.js" />
+    <Content Include="Template\js\validator.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="CommonMethods\CalendarMngr.cs" />
+    <Compile Include="CommonMethods\MyWorkHours.cs" />
+    <Compile Include="CommonMethods\VisitLinkClass.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CategoryManamentController.cs" />
+    <Compile Include="Controllers\Content\ContainController.cs" />
+    <Compile Include="Controllers\ControlpanelController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MessageCustomerToAdminController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\AllPage.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fooderz.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fooderz.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fooderz.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fooderz.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fooderz.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MsgCustomerToAdmin.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductComment.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Provider.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProviderHasManyProduct.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseCart.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SliderForProvider.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>Fooderz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Template\css\hubs" />
+    <Content Include="Views\web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\PassRecoveryPage.cshtml" />
+    <Content Include="Views\Account\PasswordRecoveryConfirm.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Admin\AdminActivePaymentStores.cshtml" />
+    <Content Include="Views\Admin\AdminActiveStores.cshtml" />
+    <Content Include="Views\Admin\AdminCategoryManagement.cshtml" />
+    <Content Include="Views\Admin\AdminCityManagment.cshtml" />
+    <Content Include="Views\Admin\AdminControlPanel.cshtml" />
+    <Content Include="Views\Admin\AdminProductCommentManagment.cshtml" />
+    <Content Include="Views\Admin\AdminProductsManagment.cshtml" />
+    <Content Include="Views\Admin\AdminShowproduct.cshtml" />
+    <Content Include="Views\Admin\AdminShowStore.cshtml" />
+    <Content Include="Views\Admin\AdminStoresCommentManagment.cshtml" />
+    <Content Include="Views\Admin\ShowActiveProduct.cshtml" />
+    <Content Include="Views\Contain\ContainPage.cshtml" />
+    <Content Include="Views\Controlpanel\AddProduct.cshtml" />
+    <Content Include="Views\Controlpanel\AddProductComments.cshtml" />
+    <Content Include="Views\Controlpanel\BaseDataAddStore.cshtml" />
+    <Content Include="Views\Controlpanel\CommentManagmentAddStore.cshtml" />
+    <Content Include="Views\Controlpanel\ComplateDataAddStore.cshtml" />
+    <Content Include="Views\Controlpanel\FirstControlPanelPage.cshtml" />
+    <Content Include="Views\Controlpanel\ImgandVideoAddStore.cshtml" />
+    <Content Include="Views\Controlpanel\MessageToAdmin.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="Views\Home\ContactCustomerToAdmin.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Pricing.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\Shared\Storelayout.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Store\DiscountStores.cshtml" />
+    <Content Include="Views\Store\GetAllStoresByGategory.cshtml" />
+    <Content Include="Views\Store\GetDiscountForThisProduct.cshtml" />
+    <Content Include="Views\Store\GetDiscountForThisStore.cshtml" />
+    <Content Include="Views\Store\GetDiscountStoresByGategory.cshtml" />
+    <Content Include="Views\Store\GetLikedStoresByGategory.cshtml" />
+    <Content Include="Views\Store\GetSpecialStoresByGategory.cshtml" />
+    <Content Include="Views\Store\LikedStores.cshtml" />
+    <Content Include="Views\Store\NewStores.cshtml" />
+    <Content Include="Views\Store\Product.cshtml" />
+    <Content Include="Views\Store\StoreView.cshtml" />
+    <Content Include="Views\Partials\CommentHtmlCodeProduct.cshtml" />
+    <Content Include="Views\Partials\CommentHTMLCodeStore.cshtml" />
+    <Content Include="Views\Partials\SearchBox.cshtml" />
+    <Content Include="Views\Partials\ShowWorkHours.cshtml" />
+    <Content Include="Views\Partials\WorkHours.cshtml" />
+    <Content Include="Views\MessageCustomerToAdmin\MessageCustomerToAdmin.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Plugins\" />
+    <Folder Include="Views\CategoryManament\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1814</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1814/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

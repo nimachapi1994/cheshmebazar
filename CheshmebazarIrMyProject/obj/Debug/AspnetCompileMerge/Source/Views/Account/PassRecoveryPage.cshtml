@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "PassRecoveryPage";
+}
+<br />
+<div class="text-center" style="margin:auto;width:35%">
+    <img src="~/Template/img/user.png" height="80" />
+    <h4> جهت بازیابی رمز عبور ایمیل خود را وارد نمایید  </h4>
+    <form action="/account/PasswordRecovery" method="post">
+        <div class="form-group">
+            <input class="form-control" dir="ltr" placeholder="Email" name="email" />
+            <br />
+            <br />
+            <button class="btn btn-primary"id="btnrecoverypass">بازیابی رمز عبور</button>
+            <br /><br />
+                 <label id="lbltext"></label>
+        </div>
+    </form>
+</div>
+
+<script src="~/Template/js/jquery.js"></script>
+<script>
+    btnrecoverypass.onclick = function () {
+   
+        this.textContent = 'در حال ارسال لینک تغییر رمز عبور...'
+    
+        lbltext.textContent='لطفا ایمیل خود را چک نمایید'
+    }
+</script>

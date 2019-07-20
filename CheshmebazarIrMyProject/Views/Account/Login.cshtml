@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<br />
+<div class="text-center">
+    <img src="~/Template/img/lock.png" height="80"/>
+    <h3>وارد حساب چشم بازار خود شوید</h3>
+</div>
+<br />
+<br />
+<link href="~/Template/css/RegisterLayoutStyles.css" rel="stylesheet" />
+<div class="container a"style="margin:auto;width:28%">
+    <form action="/account/loginConfirm" method="post">
+        <div class="form-group">
+            <label for="Email">
+                پست الکترونیک
+            </label>
+            <input placeholder="Email" id="email" dir="ltr" width="100" class="form-control" name="email" />
+            <br />
+            <a href="/account/PassRecoveryPage" class="pull-left text-primary">رمز عبورم را فراموش کرده ام</a>
+        </div>
+        <div class="form-group">
+            <label for="password">  کلمه عبور</label>
+            <input placeholder="Password" class="form-control" dir="ltr" name="Password" id="password"type="password" />
+   
+        </div>
+        <div class="checkbox text-center"style="margin:auto">
+          
+            <input type="checkbox" name="rememberme"/>مرا به خاطر بسپار
+        </div>
+        <br />
+        <br />
+        <div class="pull-left"><button class="btn btn-primary"id="btnlogin">ورود به چشم بازار</button></div>
+    </form>
+</div>
+<br />
+<br />
+<br />
+<div class="text-center" style="background-color:white;margin:auto;width:60%">
+    <div style="padding-top:1%;padding-bottom:1%">
+        <label>قبلا در چشم بازار ثبت نام نکرده اید؟</label>  <a href="/account/register" style="color:forestgreen">ثبت نام در چشم بازار</a>
+
+    </div>
+</div>
+<script src="~/Template/js/jquery-1.10.2.js"></script>
+<script>
+    $(password).keyup(function () {
+        confirmpassword.value = this.value;
+    })
+    $(btnlogin).click(function () {
+        this.textContent = 'لطفا چند لحظه صبر کنید تا وارد شوید...'
+    })
+</script>

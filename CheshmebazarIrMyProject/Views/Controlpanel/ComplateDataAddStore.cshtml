@@ -1,0 +1,301 @@
+﻿
+@{
+    ViewBag.Title = "ComplateDataAddStore";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+@foreach (var item in ViewBag.dd as IEnumerable<CheshmebazarIrMyProject.Models.ShowCompaleStore_Result>)
+{
+    <div class="row" style="background-color:white">
+        <br />
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            @if (item.Logo != null)
+            {
+                <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item.Logo)}")" alt="@item.Name" width="150" height="100" />
+
+            }
+            else
+            {
+                <td><img src="~/Template/img/logo/glasses.png" style="width:100px;height:50px" class="img img-rounded img-responsive img-thumbnail" /></td>
+
+            }
+        </div>
+        <div class="col-sm-3">
+            <b>@item.Name</b> <a href="" class="btn btn-bazaar btn-sm"><b>صفحه فروشگاه</b> </a>
+            <br />
+            <b>نام ونام خانوادگی مدیر :</b> <b>@item.ManagmentName</b>
+            <br />
+            @if (item.AdminConfirm == true)
+            {
+                <b>وضعیت : </b> <b class="text-success">منتشر و تایید شده </b>
+            }
+            else
+            {
+                <b>وضعیت : </b> <b class="text-danger">در انتظار تایید </b>
+            }
+            <br />
+            @*<form action="/ControlPanel/StoreDisable" method="post"><button class="btn btn-danger btn-xs"><small>&times;</small> <b>لغو انتشار فروشگاه</b></button></form>*@
+        </div>
+        <div class="col-sm-7"></div>
+
+
+
+    </div>
+    <br />
+    <div class="tab-bar">
+        <div class="container">
+            <ul class="nav nav-tabs pull-right">
+
+                <li class="pull-left">
+                    <a href="/controlpanel/basedataaddstore"><small class="a">اطلاعات</small></a>
+                </li>
+                <li class="active pull-left">
+                    <a href="/controlpanel/complatedataaddstore"><small class="a">اطلاعات تکمیلی</small></a>
+                </li>
+                <li class="pull-left">
+                    <a href="/controlpanel/imgandvideoaddstore"><small class="a">تصاویر و تیزر</small></a>
+                </li>
+                <li class="pull-left">
+                    <a href="/controlpanel/selectlocation"><small class="a">نقشه</small></a>
+                </li>
+                <li class="pull-left">
+                    <a href="/controlpanel/commentmanagmentaddstore"><small class="a">مدیریت کامنت های فروشگاه 5</small></a>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <div class="alert-success"id="divSuccessComplatedata">@TempData["msgCompateStorePart1"]</div>
+            <div class="card-container padded">
+                <div class="title">
+                    اطلاعات تکمیلی
+                    <h5 class="text-muted">
+                        <small>
+                            <span class="text-danger">*</span> فیلدهای ستاره&zwnj;دار اجباری هستند
+                        </small>
+                    </h5>
+
+
+
+
+                    <form action="/controlpanel/GetDataAddStorePart5StoreInfo" method="post">
+                        <div class="form-group">
+
+                            <div class="form-group">
+                                <small>
+                                    <span class="text-danger">*</span> شهر
+                                </small>
+                                <input value="@item.City" class="form-control" name="city" placeholder="مثال : تهران">
+                            </div>
+                            <div class="form-group">
+                                <small>
+                                    <span class="text-danger">*</span> استان
+                                </small>
+                                <input value="@item.Province" class="form-control" name="province" placeholder="مثال : ...">
+                            </div>
+                            <div class="form-group">
+                                <small>
+                                    <span class="text-danger">*</span> پلاک
+                                </small>
+                                <input value="@item.PostalCode" class="form-control" name="postalcode" placeholder="مثال : 109">
+                            </div>
+                            <div class="form-group">
+                                <small>
+                                    <span class="text-danger">*</span> آدرس
+                                </small>
+                                <textarea  name="address" class="form-control input-lg" style="font-size:medium;font-style:italic" placeholder="لطفا آدرس دقیق را وارد اینجا وارد نمایید">@item.Address</textarea>
+                            </div>
+                        </div>
+                        <button class="btn btn-bazaar btn-md"id="btnSaveCompateData">ذخیره اطلاعات</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+        <form action="/controlpanel/GetDataAddStorePart6Contacts" method="post">
+            <div class="col-sm-5">
+                <div class="alert-success" id="divSuccessPhoneAndSite">@TempData["msgComaplateStorePart2"]</div>
+                <div class="card-container padded">
+                    <div class="title">
+                        راه های ارتباطی
+                        <h5 class="text-muted">
+                            <small>
+                                <span class="text-danger">*</span> فیلدهای ستاره&zwnj;دار اجباری هستند
+                            </small>
+                        </h5>
+                        <div class="form-group">
+
+                            <div class="form-group">
+                                <small>
+                                    <span class="text-danger">*</span> شماره تماس
+                                </small>
+
+                                <input value="@item.PhoneOne" class="form-control" name="phoneone" placeholder="02122222222">
+                            </div>
+                            <div class="form-group">
+                                <small>
+                                    <span class="text-danger"></span> شماره تماس
+                                </small>
+                                <input value="@item.PhoneTwo"  class="form-control" name="phonetwo" placeholder="اجباری نیست">
+                            </div>
+                            <div class="form-group">
+                                <small>
+                                    <span class="text-danger"></span>شماره تماس
+                                </small>
+                                <input value="@item.PhoneThree" class="form-control" name="phonethree" placeholder="اجباری نیست">
+                            </div>
+                            <div class="form-group">
+                                <small>
+                                    <span class="text-danger">*</span> شماره موبایل
+                                </small>
+                                <input value="@item.Mobile" class="form-control" name="mobile" placeholder="09171111111">
+                            </div>
+
+                            <div class="form-group">
+                                <small>
+                                    <span class="text-danger">*</span> آدرس وبسایت
+                                </small>
+                                <input value="@item.WebSite" class="form-control" name="website" dir="ltr" placeholder="Www.YourWebSiteName.com" title="آدرس وبسایت را دقیق و کامل وارد کنید">
+                            </div>
+
+                        </div>
+                        <button class="btn btn-bazaar btn-md"id="btnSavePhoneANdsite">ذخیره اطلاعات</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </form>
+
+
+
+
+
+        <div class="col-sm-1"></div>
+
+
+    </div>
+
+    @*THE SOCIAL NETWORKS---------------------------------------------------------------------------------------------------*@
+
+
+
+
+<div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="alert-success" id="divSuccessSocialNetworks">@TempData["msgSocialNeteworks"]</div>
+            <div class="card-container padded">
+                <div class="title">
+                    شبکه های اجتماعی
+                    <form action="/controlpanel/GetDataAddStorePart7SocialsId" method="post">
+                        <div class="form-group form-inline text-center" style="align-content:center">
+
+                            <div class="form-group">
+
+                                <span><small><img src="~/Icons/if_telegram_1419139.png" style="width:30px;height:30px;padding-bottom:3%" /></small></span>   <input value="@item.TelegramChannel" dir="ltr" title="آیدی کانال یا اکانت تلگرام" class="form-control" name="telegramchannel" placeholder="Telegram Id/Channel Id">
+                            </div>
+
+                            <div class="form-group">
+
+                                <span><small><img src="~/Icons/whatsapp-32.png" style="width:30px;height:30px;padding-bottom:3%" /></small></span>   <input value="@item.Whsup" input dir="ltr" title="شماره تماس واتس آپ" name="whsup" class="form-control" placeholder="Whats up">
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <span><small><img src="~/Icons/instagram.png" style="width:30px;height:30px;padding-bottom:3%" /></small></span>   <input value="@item.Instagram"  dir="ltr" title="آیدی اینستاگرام" name="instagram" class="form-control" placeholder="Instagram Id">
+                            </div>
+
+                        </div>
+                        <div class="form-group form-inline text-center" style="align-content:center">
+
+                            <div class="form-group">
+
+                                <span><small><img src="~/Icons/google-plus.png" style="width:30px;height:30px;padding-bottom:3%" /></small></span>   <input value="@item.GooglePlus" dir="ltr" title="آیدی گوگل پلاس" name="googleplus" class="form-control" placeholder="Google Plus Id">
+                            </div>
+
+                            <div class="form-group">
+
+                                <span><small><img src="~/Icons/linkedin.png" style="width:30px;height:30px;padding-bottom:3%" /></small></span>   <input value="@item.LikedIn"  dir="ltr" title="آیدی اینکدین" name="LikedIn" class="form-control" placeholder="Linked In Id">
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <span><small><img src="~/Icons/facebook.png" style="width:30px;height:30px;padding-bottom:3%" /></small></span>   <input value="@item.Facebook" input dir="ltr" title="آیدی فیسبوک" name="facebook" class="form-control" placeholder="Facebook Id">
+                            </div>
+
+                        </div>
+                        <div style="margin:auto" class="text-center">
+                            <button class="btn btn-bazaar btn-md"id="btnSaveSocialNetworks">ذخیره اطلاعات</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="col-sm-1"></div>
+
+
+        </div>
+        @*THE Key Vocab---------------------------------------------------------------------------------------------------*@
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class="alert-success" id="divSuccessKeywords">@TempData["msgStoreKeyWords"]</div>
+                <div class="card-container padded">
+                    <form action="/ControlPanel/GetDataAddStorePart8KeyWords" method="post">
+                        <div class="form-group form-inline">
+                            <label class="fontclass"> .لطفا کلمات کلیدی را با فرمت زیر وارد کرده و بین هر کدام یک علامت , قرار دهید </label><br />
+                            <input value="@item.KeyWords" name="KeyWords" placeholder=" مثال
+                                   کفش ترک , لباس مجلسی , خرید موبایل , ..." class="form-control" style="width:80%" /><span style="padding-right:3%"></span><button class="btn btn-bazaar"id="btnSaveKeywords">ذخیره اطلاعات</button>
+                           
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+       </div>
+}
+
+
+
+
+
+<script>
+    btnSaveCompateData.onclick = function () {
+        this.textContent='درحال ذخیره اطلاعات...'
+    }
+    btnSaveKeywords.onclick = function () {
+        this.textContent = 'درحال ذخیره اطلاعات...'
+    }
+    btnSavePhoneANdsite.onclick = function () {
+        this.textContent = 'درحال ذخیره اطلاعات...'
+    }
+    btnSaveSocialNetworks.onclick = function () {
+        this.textContent = 'درحال ذخیره اطلاعات...'
+    }
+</script>
+
+
+

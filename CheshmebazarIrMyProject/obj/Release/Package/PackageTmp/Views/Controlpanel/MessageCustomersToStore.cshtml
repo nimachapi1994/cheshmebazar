@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "MessageCustomersToStore";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+
+
+
+
+<div class="card-container">
+ <div class="pull-left" style="padding-right:5%">
+     <label style="font-size:small">پیام خصوصی مشتریان به شما</label>
+ </div>
+    <br />
+    <br />
+    <table class="table table-bordered table-responsive table-hover" style="margin:auto;width:60%">
+        @foreach (var item in ViewBag.showmessage as IEnumerable<CheshmebazarIrMyProject.Models.sp_ShowMsgCustomerToStore_Result>)
+        {
+
+            <tr>
+               
+                <th>نام</th>
+                <th>نام خانواگی</th>
+                <th>شماره تماس یا ایمیل</th>
+                <th>شرح پیام</th>
+            </tr>
+            <tr>
+             
+                <td>@item.Name</td>
+                <td>@item.Family</td>
+                <td>@item.EmailorPhoneNumber</td>
+                <td>
+                    <p>@item.Txt</p>
+                </td>
+            </tr>
+
+        }
+    </table>
+
+</div>
+

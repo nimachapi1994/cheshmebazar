@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "SelectControlPanelPage";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+@for (int i = 0; i < 5; i++)
+{
+    <br />
+}
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6 text-center">
+
+        <h4>جهت اضافه کردن و تغییر مشخصات محصولات و مدیریت فروشگاه دکمه ویرایش اطلاعات را کلیک کنید</h4>
+        <a href="/controlpanel/FirstControlPanelPage" class="btn btn-bazaar">ویرایش اطلاعات</a>
+        @for (int i = 0; i < 3; i++)
+        {
+            <br />
+        }
+        <h4>جهت شروع به کار روزانه , انتخاب غذاو مدیریت سفارشات دکمه شروع به کار را کلیک کنید</h4>
+        <a href="/controlpanel/DailySell" class="btn btn-bazaar">شروع به کار </a>
+
+        @for (int i = 0; i < 3; i++)
+        {
+            <br />
+        }
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+

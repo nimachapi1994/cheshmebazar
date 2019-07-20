@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="robots" content="NOODP">
+    <meta name="theme-color" content="#809838">
+
+   
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>
+
+
+        پنل چشم بازار
+    </title>
+
+
+    @using CheshmebazarIrMyProject.Models
+    @using IdentitySample.Models
+    @using Microsoft.AspNet.Identity;
+    @using Microsoft.AspNet.Identity.EntityFramework;
+    @using Microsoft.AspNet.Identity.Owin;
+    <link rel="stylesheet" type="text/css" href="~/Template/css/style.css">
+
+    <link href="~/Styles/FontStyle.css" rel="stylesheet" />
+   
+    <div class="wrapper bazaar-font rtl a">
+
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" id="main-navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="https://cheshmebazar.ir">
+                        <img class="bazaar-logo" src="~/Template/img/logo/glasses.png" alt="Bazaar Logo">
+                        <div class="navbar-brand-text" style="font-style:normal">
+                            پنل فروشگاه چشم بازار
+                        </div>
+                    </a>
+                    <button type="button" class="btn btn-bazaar navbar-toggle" data-toggle="collapse" data-target="#bazaar-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="navbar-header">
+                    <ul class="nav nav-tabs">
+                        <li class="active pull-left">
+                            <a href="/controlpanel/FirstControlPanelPage">صفحه اول</a>
+                        </li>
+                        <li class="active pull-left">
+                            <a href="/controlpanel/BaseDataAddStore">مدیریت فروشگاه</a>
+
+                        </li>
+                        <li class="active pull-left">
+                            <a href="/controlpanel/MessageCustomersToStore"> مدیریت پیام ها</a>
+
+                        </li>
+                        <li class="active pull-left">
+                            <a href="/controlpanel/MessageToAdmin">ارتبط با مدیریت</a>
+
+                        </li>
+                        <li class="active pull-left">
+                            <a href="/home/index" class="btn btn-primary">خروج</a>
+
+                        </li>
+                     
+                       
+                    </ul>
+                </div>
+                @{ 
+                    var d = HttpContext.Current.GetOwinContext().Get<ApplicationUserManager>();
+
+                }
+                <div class="collapse navbar-collapse" id="bazaar-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right rtl">
+                        
+                        <br />
+
+                       @if (User.Identity.IsAuthenticated == true)
+                       {
+                           var find = d.FindById(User.Identity.GetUserId());
+                        <li>خوش آمدید: <label> @find.Email</label></li>
+                       }
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <style>
+            .alert-purple {
+                background-color: #d9adeb;
+                border-color: #5d1e79;
+                color: black;
+            }
+        </style>
+
+
+</head>
+
+<body class="a">
+  @RenderBody()
+
+
+    <div id="footer" class="bazaar-font auto-dir">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 links">
+                    <a target="_blank" href="https://cheshmebazar.ir">چشم ‌بازار</a>
+                    <a target="_blank" href="https://cheshmebazar.ir">چشم ‌بازار</a>
+                </div> 
+                <div class="col-xs-12">
+                    <div class="tal-cent logotype">
+                        <img src="%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%87%D8%A7%20%C2%B7%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%20%D8%AF%D9%87%D9%86%D8%AF%D9%87%20%C2%B7%20%D9%BE%D9%86%D9%84%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%D8%AF%D9%87%D9%86%D8%AF%DA%AF%D8%A7%D9%86%20%C2%B7%20%DA%A9%D8%A7%D9%81%D9%87%E2%80%8C%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1_files/bazaar-logo-and-logotype-small.png" alt="Bazaar Logotype" height="75" width="130">
+
+                        <div id="footer-copy">همهٔ حقوق برای چشم ‌بازار محفوظ است. ©‏ 1396</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+   
+
+
+
+
+
+
+
+    
+
+  
+
+
+
+</body>
+</html>

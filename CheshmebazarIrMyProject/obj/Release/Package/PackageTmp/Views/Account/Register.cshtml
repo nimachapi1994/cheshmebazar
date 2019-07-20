@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<br />
+<div class="text-center">
+    <img src="~/Template/img/add-people-interface-symbol-of-black-person-close-up-with-plus-sign-in-small-circle.png" height="80"/>
+    <h3>به چشم بازار بپیوندید</h3>
+</div>
+<br />
+<br />
+@using IdentitySample.Models
+@model RegisterViewModel
+<link href="~/Content/Validation.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+<link href="~/Template/css/RegisterLayoutStyles.css" rel="stylesheet" />
+<div class="container a">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-4">
+            <form action="/account/RegisterConfirm" method="post">
+                @Html.ValidationSummary()
+                <div class="form-group">
+                    <label for="Email">
+                        پست الکترونیک
+                    </label>
+                  
+                    @Html.TextBoxFor(x => x.Email, new { placeholder = "Email", @class = "form-control", dir = "ltr" })
+               
+                </div>
+                <div class="form-group">
+                    <label for="password">  کلمه عبور</label>
+                    @Html.TextBoxFor(x => x.Password, new { placeholder = "Password", @class = "form-control", dir = "ltr", type = "password", id = "password" })
+
+
+                 
+                </div>
+                <input placeholder="Password" hidden="hidden" dir="ltr" name="confirmpassword" id="confirmpassword" type="password"/>
+                <div class="pull-left"><button class="btn btn-primary"id="btninsert">ثبت نام در چشم بازار</button></div>
+            </form>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4" >
+            به طور حرفه ای و سریع عمل کنید
+            هزاران چشم روزانه محصولات شما را می بیند
+              با چشمی باز رقابت کنید و کسب و کارتان را توسعه دهید
+            بازاری به وسعت تمام چشم های ایران زمین برای خود ایجاد کنید
+            نقد و بررسی نظرات مشتریان نسبت به محصولات و فروشگاه خود را ببینید
+            وضعیت و تعداد بازدید روزانه فروشگاه و محصولاتتان رو در لحظه مشاهده کنید
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div class="text-center" style="background-color:white;margin:auto;width:60%">
+    <div style="padding-top:1%;padding-bottom:1%">
+        <label>قبلا در چشم بازار ثبت نام کرده اید؟</label>  <a href="/account/login" style="color:forestgreen">ورود به چشم بازار</a>
+
+    </div>
+</div>
+<script src="~/Template/js/jquery-1.10.2.js"></script>
+<script>
+    $(password).keyup(function () {
+        confirmpassword.value = this.value;
+    })
+    $(btninsert).click(function () {
+        this.textContent = 'لطفا چند لحظه صبر نمایید...'
+    })
+</script>

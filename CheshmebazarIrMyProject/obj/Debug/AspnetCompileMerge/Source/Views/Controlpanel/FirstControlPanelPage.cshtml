@@ -1,0 +1,295 @@
+﻿
+@{
+    ViewBag.Title = "StoreControlPanel";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+
+
+
+
+
+
+
+@foreach (var item in ViewBag.data as IEnumerable<CheshmebazarIrMyProject.Models.ShowCompaleStore_Result>)
+{
+
+    <div class="container">
+        <script src="~/Template/js/jquery-2.js"></script>
+
+        <div class="tab-content card-container padded">
+            <div class="tab-pane active">
+                <style scoped="">
+                    table.apps-table td, table.apps-table td * {
+                        color: #777 !important;
+                        
+                    }
+                </style>
+                <div>
+
+
+
+
+                    <span class="pull-left">
+                        <button class="btn btn-bazaar" id="btnDivnewproduct">محصول جدید  +</button>
+                    </span>
+                    @if (item.Name == null || item.ManagmentName == null || item.Logo == null)
+                    {
+                        <span class="pull-left" style="padding-right:3%">
+                            <button class="btn btn-bazaar" id="btnshowDivnewstore">ایجاد فروشگاه جدید  +</button>
+                        </span>
+
+                    }
+                    else
+                    {
+                        <span class="pull-left" style="padding-right:3%">
+                            <button class="btn btn-bazaar" id="btnshowDivnewstore">ویرایش اولیه مشخصات فروشگاه</button>
+                        </span>
+                    }
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+        @using CheshmebazarIrMyProject.Models
+
+        <table class="table table-bordered table-hover table-responsive table-striped" id="tblshowproducts" style="background-color:white">
+            <tr>
+                <th>نام محصول</th>
+                <th>لوگو</th>
+                <th>وضعیت</th>
+                <th>تعداد کامنت ها</th>
+                <th>تعداد مشاهده</th>
+                <th>ویرایش</th>
+                <th>حذف</th>
+
+            </tr>
+            @foreach (var item1 in ViewBag.showproducts as IEnumerable<Product>)
+            {
+                <tr>
+                   
+                 
+                    @if (item1.Name != null)
+                    {
+                        <td>@item1.Name</td>
+                    }
+                    @if (item1.Logo != null)
+                    {
+                        <td><img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item1.Logo)}")" style="width:100px;height:50px" class="img img-rounded img-responsive img-thumbnail" /></td>
+
+                    }
+                    else
+                    {
+                        <td><img src="~/Template/img/logo/glasses.png" style="width:100px;height:50px" class="img img-rounded img-responsive img-thumbnail" /></td>
+
+                    }
+                    @if (item1.AdminConfirm == true)
+                    {
+                    <td><label class="text-success">منتشر شده</label></td>
+                    }
+                    else
+                    {
+                        <td><label class="text-warning">منتشر نشده</label></td>
+                    }
+                    @if (item1.PCommentOKs.Where(x => x.Product_Id == item1.Id).Count() == 0)
+                    {
+                        <td>0</td>
+                    }
+                    else
+                    {
+                        <td>@item1.PCommentOKs.Where(x => x.Product_Id == item1.Id).Count()</td>
+                    }
+                    @if (item1.TotalVisitors==null)
+                    {
+                        <th>0</th>
+                    }
+                    else
+                    {
+                        <th>@item1.TotalVisitors.Value</th>
+                    }
+                   
+                    
+                    <td><button class="btn btn-danger"id="btndeleteproduct"value="@item1.Id">حذف</button></td>
+                    <td><a href="/controlpanel/addproduct?id=@(item1.Id)">ویرایش</a></td>
+                </tr>
+            }
+           
+        </table>
+    </div>
+
+    <script>
+        $("table").delegate('#btndeleteproduct', 'click', function () {
+            var tr = $(this).parent().parent();
+            jQuery.post('/controlpanel/DeleteProduct', { id: $(this).val() }, function () {
+                $(tr).remove()
+            })
+        })
+        
+       
+      
+    </script>
+    foreach (var item3 in ViewBag.data1 as IEnumerable<CheshmebazarIrMyProject.Models.ShowCompaleStore_Result>)
+    {
+      if (item3.Name != null && item3.Logo != null && item3.ManagmentName != null)
+      {
+        <form action="/controlpanel/WhenFisrtMakeStore" method="post" enctype="multipart/form-data">
+            <div class="container" style="margin:auto;width:40%" id="divnewstore">
+                <div class="form-group">
+                    <div id="divEditOrMakeStore">@TempData["msgWhenMakeOrEditStore"]</div>
+                    <br />
+                    <input placeholder="نام فروشگاه" value="@item3.Name" class="form-control" name="name" />
+                </div>
+                <div class="form-group">
+                    <input placeholder="نام مدیر فروشگاه" value="@item3.ManagmentName" class="form-control" name="managmentname" />
+                </div>
+                <div class="form-group" id="div">
+                    <h5 for="txtfileInsertStore">لوگوی فروشگاه</h5>
+                    <input class="form-control" typeof="image/*" id="txtfileInsertStore" type="file" name="img" />
+                    <div>@TempData["msgbadimgformat"]</div>
+                    <br />
+                    <div class="text-center" id="divShowIMGStore">
+                        <button id="btndeletelogostore"type="button" class="btn btn-danger btn-xs">&times;</button>
+                        <img width="130" src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item3.Logo)}")" height="130" id="imgstore" />
+
+                    </div>
+                </div>
+                <button class="btn btn-bazaar" id="btnInsertNewStore">ایجاد فروشگاه</button>
+            </div>
+        </form>
+        }
+        else
+        {
+            <form action="/controlpanel/WhenFisrtMakeStore" method="post" enctype="multipart/form-data">
+                <div class="container" style="margin:auto;width:40%" id="divnewstore">
+                    <div class="form-group">
+
+
+                        <input placeholder="نام فروشگاه"  class="form-control" name="name" />
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="نام مدیر فروشگاه"  class="form-control" name="managmentname" />
+                    </div>
+                    <div class="form-group" id="div">
+                        <h5 for="txtfileInsertStore">لوگوی فروشگاه</h5>
+                        <input class="form-control" id="txtfileInsertStore" type="file" name="img" />
+                        <br />
+                        <div class="text-center" id="divShowIMGStore">
+                            <button id="btndeletelogostore" class="btn btn-danger btn-xs">&times;</button>
+                            <img width="130"  height="130" id="imgstore" />
+                        </div>
+                    </div>
+                    <button class="btn btn-bazaar" id="btnInsertNewStore">ایجاد فروشگاه</button>
+                </div>
+            </form>
+        }
+    }
+
+}
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<body id="bd"></body>
+
+<script>
+    $(txtfileInsertStore).change(function () {
+        var reader = new FileReader()
+        reader.readAsDataURL(txtfileInsertStore.files[0])
+        reader.onloadend = function (reslutimg) {
+            var html = reslutimg.target.result;
+            imgstore.src = html;
+            $(divShowIMGStore).show();
+        }
+    })
+
+</script>
+<script>
+    $(btndeletelogostore).click(function () {
+        $(divShowIMGStore).hide();
+        imgstore.src = ''
+     $(txtfileInsertStore).val('')
+    })
+</script>
+<script>
+
+    $(btnInsertNewStore).click(function () {
+        this.textContent='لطفا منتظر بمانید تا فروشگاه شما ساخته شود ...'
+    })
+  
+</script>
+<form action="/ControlPanel/AddProductConfirmPartFirst" method="post" enctype="multipart/form-data">
+    <div class="container" style="margin:auto;width:40%" id="divnewProduct">
+        <div class="form-group">
+            <input placeholder="نام محصول"name="name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <h5 for="txtfileInsertProduct">لوگوی محصول</h5>
+            <input class="form-control"name="img" id="txtfileInsertProduct" type="file" />
+            <br />
+            <div class="text-center" id="divShowIMGProduct">
+                <button id="btndeletelogoProduct" class="btn btn-danger btn-xs">&times;</button>
+                <img width="130" height="130" id="imgProduct" />
+            </div>
+        </div>
+        <button class="btn btn-bazaar" id="btnInsertNewProduct">ایجاد محصول</button>
+    </div>
+</form>
+<body id="bd">
+</body>
+<script>
+    $(txtfileInsertProduct).change(function () {
+        var reader = new FileReader()
+        reader.readAsDataURL(txtfileInsertProduct.files[0])
+        reader.onloadend = function (reslutimg) {
+            var html = reslutimg.target.result;
+            imgProduct.src = html;
+            $(divShowIMGProduct).show();
+        }
+    })
+    $(btndeletelogoProduct).click(function () {
+        imgProduct.src = ''
+      
+        $(txtfileInsertProduct).val('')
+        $(divShowIMGProduct).hide();
+    })
+    $(btnInsertNewProduct).click(function () {
+        this.textContent = 'لطفا منتظر بمانید تا به صفحه مدیریت این محصول این ارجاع شوید ...'
+    })
+    $(bd).html(function () {
+        $(divnewProduct).hide()
+        $(divnewstore).hide()
+     
+        $(divShowIMGProduct).hide();
+    })
+    $(btnshowDivnewstore).click(function () {
+    
+            $(divnewProduct).hide()
+      
+        $(divnewstore).show();
+    })
+    $(btnDivnewproduct).click(function () {
+
+        $(divnewProduct).show()
+
+        $(divnewstore).hide()
+    })
+</script>
+<script>
+    
+    
+    if (document.getElementById("#txtfileInsertProduct") == null || $(txtfileInsertProduct).val('') || $(txtfileInsertProduct).attr('src', '')) {
+        $(txtimg).removeAttr('name')
+    } else {
+        $(txtimg).attr('name', 'img')
+    }
+    
+    //$(bd).html(function () {
+
+    //    if (document.getElementById("txtfileInsertProduct") == null || txtfileInsertProduct.value == '' || $(txtfileInsertProduct).attr('src', '')) {
+    //        $(txtfileInsertProduct).removeAttr('name');
+    //    } else {
+    //        $(txtfileInsertProduct).attr('name', 'img');
+    //    }
+    //})
+</script>

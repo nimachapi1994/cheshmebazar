@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "DailySell";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+
+@for (int i = 0; i < 5; i++)
+{
+    <br />
+}
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2">
+        <h4>غذای روز سر آشپز</h4>
+        <table class="table table-bordered table-hover table-responsive table-striped" id="tblshowproducts" style="background-color:white">
+            <tr>
+                <th>نام غذا</th>
+                <th>موجود</th>
+
+            </tr>
+            <tr>
+                <td>چلوکباب</td>
+                <td>
+                    <input type="checkbox" class="pull-left" />
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    <div class="col-sm-2">
+       <h4>غذای های برنجی </h4>
+        <table class="table table-bordered table-hover table-responsive table-striped" id="tblshowproducts" style="background-color:white">
+            <tr>
+                <th>نام غذا</th>
+                <th>موجود</th>
+
+            </tr>
+            <tr>
+                <td>چلوکباب</td>
+             <td>
+                 <input type="checkbox" class="pull-left" />
+             </td>
+            
+            </tr>
+
+        </table>
+    </div>
+    <div class="col-sm-2">
+        <h4> انواع خوراک ها</h4>
+        <table class="table table-bordered table-hover table-responsive table-striped" id="tblshowproducts" style="background-color:white">
+            <tr>
+                <th>نام غذا</th>
+                <th>موجود</th>
+
+            </tr>
+            <tr>
+                <td>چلوکباب</td>
+                <td>
+                    <input type="checkbox" class="pull-left" />
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    <div class="col-sm-2">
+        <h4> انواع دسر و سالاد</h4>
+        <table class="table table-bordered table-hover table-responsive table-striped" id="tblshowproducts" style="background-color:white">
+            <tr>
+                <th>نام غذا</th>
+                <th>موجود</th>
+
+            </tr>
+            <tr>
+                <td>چلوکباب</td>
+                <td>
+                    <input type="checkbox" class="pull-left" />
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    <div class="col-sm-2">
+        <h4>انواع نوشیدنی</h4>
+        <table class="table table-bordered table-hover table-responsive table-striped" id="tblshowproducts" style="background-color:white">
+            <tr>
+                <th>نام غذا</th>
+                <th>موجود</th>
+
+            </tr>
+            <tr>
+                <td>چلوکباب</td>
+                <td>
+                    <input type="checkbox" class="pull-left" />
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    
+ 
+    <div class="col-sm-1"></div>
+    </div>
+<br /><br />
+<div class="form-group text-center">
+    <button class="btn btn-bazaar btn-lg"id="btnInsertAll">ذخیره اطلاعات</button>
+</div>
+<script>
+    btnInsertAll.onclick = function () {
+        this.textContent='در حال ذخیره اطلاعات ...'
+    }
+</script>
+@for (int i = 0; i <= 5; i++)
+{
+    <br />
+}

@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "AdminActivePaymentStores";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>لیست فروشگاه های پرداخت شده, تایید شده و فعال </h2>
+<div class="form-group">
+    <label class="control-label" for="txtsearch"></label>
+    <input class="form-control" id="txtsearch" name="txtsearch" />
+</div>
+<div id="sections">
+    <section class="box-list">
+        <div class="container">
+            <div class="container-wrapper">
+
+                <div class="row row16px sw-wrapper">
+
+
+                    <div class="row row16px sw-wrapper">
+                        @{
+                            CheshmebazarIrMyProject.Models.DbCheshmeBazarIrMyProjectok1 db =
+                                 new CheshmebazarIrMyProject.Models.DbCheshmeBazarIrMyProjectok1();
+                            var d = db.Stores.ToList().OrderByDescending(x => x.EditDate.Value);
+                        }
+                        @foreach (var item in d as IEnumerable<CheshmebazarIrMyProject.Models.Store>)
+                        {
+
+
+                            foreach (var item2 in item.PurchaseCarts)
+                            {
+                                if (item2.IsPayed == true && item2.ExpiredDate != DateTime.Now)
+                                {
+                                    if (item.AdminConfirm == true)
+                                    {
+                                        <div class="col col-lg-2 col-md-3 col-sm-4 col-xs-6 sw-slide">
+                                            <div class="box">
+                                                <a class="ad-box" href="" title="StoreName" target="_blank">
+                                                    <div class="img">
+
+                                                    </div>
+
+                                                    <h4 class="title">@item.Name</h4>
+                                                    <div>
+                                                        <a href="/admin/AdminShowStore?id=@(item.Id)" class="btn btn-success" style="color:black">مشاهده فروشگاه</a>
+
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+
+                                    }
+
+                                }
+                                else
+                                {
+                                    if (item2.IsPayed == true && item2.ExpiredDate == DateTime.Now)
+                                    {
+                                        var find = db.PurchaseCarts.Find(item2.Id);
+                                        find.IsPayed = false;
+                                        item.AdminConfirm = false;
+                                        db.SaveChanges();
+                                    }
+                                }
+
+                            }
+
+                        }
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+

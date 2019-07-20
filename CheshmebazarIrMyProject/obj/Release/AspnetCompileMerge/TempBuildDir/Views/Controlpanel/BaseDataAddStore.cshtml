@@ -1,0 +1,250 @@
+﻿
+@{
+    ViewBag.Title = "AddStore";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+
+
+
+@using CheshmebazarIrMyProject.Models
+@foreach (var item in ViewBag.dd as IEnumerable<ShowCompaleStore_Result>)
+{
+    <div class="row" style="background-color:white">
+        <br />
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            @if (item.Logo != null)
+            {
+                <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item.Logo)}")" alt="@item.Name" width="150" height="100" />
+
+            }
+            else
+            {
+                <td><img src="~/Template/img/logo/glasses.png" style="width:100px;height:50px" class="img img-rounded img-responsive img-thumbnail" /></td>
+
+            }
+        </div>
+        <div class="col-sm-3">
+            <b>@item.Name</b> <a href="/store/storeview?id=(@item.Id)" class="btn btn-bazaar btn-sm"><b>صفحه فروشگاه</b> </a>
+            <br />
+            <b>نام ونام خانوادگی مدیر :</b> <b>@item.ManagmentName</b>
+            <br />
+           @if (item.AdminConfirm == true)
+           {
+            <b>وضعیت : </b> <b class="text-success">منتشر و تایید شده </b>
+           }
+           else
+           {
+            <b>وضعیت : </b> <b class="text-danger">در انتظار تایید </b>
+           }
+            <br />
+            <button class="btn btn-danger btn-xs"><small>&times;</small> <b>لغو انتشار فروشگاه</b></button>
+        </div>
+        <div class="col-sm-7"></div>
+
+
+
+    </div>
+
+
+<br />
+<div class="tab-bar">
+    <div class="container">
+        <ul class="nav nav-tabs pull-right">
+
+            <li class="active pull-left">
+                <a href="/controlpanel/basedataaddstore" ><small  class="a">اطلاعات</small></a>
+            </li>          
+            <li class="pull-left">
+                <a href="/controlpanel/complatedataaddstore"><small  class="a">اطلاعات تکمیلی</small></a>
+            </li>
+            <li class="pull-left">
+                <a href="/controlpanel/imgandvideoaddstore"><small class="a">تصاویر و تیزر</small></a>
+            </li>     
+            <li class="pull-left">
+                <a href="/controlpanel/selectlocation"><small class="a">نقشه</small></a>
+            </li>        
+            <li class="pull-left">
+                <a href="/controlpanel/commentmanagmentaddstore"><small class="a">مدیریت کامنت های فروشگاه 5</small></a>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+        <div class="alert-success" id="divSuccessBaseData">@TempData["msgBaseDataAddStore"]</div>
+        <div class="card-container padded">
+            <div class="title">
+                اطلاعات پایه
+                <h5 class="text-muted">
+                    <small>
+                        <span class="text-danger">*</span> فیلدهای ستاره&zwnj;دار اجباری هستند
+                    </small>
+                </h5>
+                <form action="/ControlPanel/GetDataAddStorePart2" method="post">
+                    <div class="form-group">
+
+                        <small>
+                            <span class="text-danger">*</span> دسته بندی
+                        </small>
+                     
+                        <select style="padding-right:4%" id="slccategoryparent" class="form-control" title="انتخاب دسته بندی" name="categoryparent">
+                            <option value="-1">انتخاب دسته بندی</option>
+                            @foreach (var getCategoryItems in ViewBag.selectedCategory as IEnumerable<CategoryParent>)
+                            {
+                                <option value="@getCategoryItems.Id">@getCategoryItems.Name</option>
+                            }
+                        </select>
+                       
+                            
+                     
+
+                    
+                           
+                     
+
+                    </div>
+                   
+                    <div class="form-group">
+                        <small>
+                            <span class="text-danger">*</span> زیر دسته
+                        </small>
+                        <select class="form-control" title="انتخاب زیر دسته" name="id" id="slccategorychild">
+                            <option value="-1">---------------------------------------</option>
+                        </select>
+                      
+                    </div>
+                    <div class="form-group">
+
+                        <small>
+                            <span class="text-danger">*</span> توضیحات
+                        </small>
+                        <textarea  title="لطفا در این بخش توضیح کامل از کسب و کار خود بنویسید" name="txt" class="btn-block form-control" style="height:400%;font-size:small;font-style:normal">@item.Txt</textarea>
+                    </div>
+                    <div class="form-group">
+
+                        <small>
+                            <span class="text-danger">*</span> شعار فروشگاه
+                        </small>
+                        <input value="@item.Motto" class="btn-block form-control" name="motto" title="شعار فروشگاه" style="font-size:medium;font-style:oblique">
+                    </div>
+                    <button class="btn btn-bazaar btn-sm pull-right"id="btnSaveBaseData">ذخیره اطلاعات پایه</button>
+                </form>
+            </div>
+          
+        </div>
+    </div>
+    <script src="~/Template/js/jquery.js"></script>
+    <script>
+   
+        $(slccategoryparent).change(function () {
+            $(slccategorychild).html('')
+            jQuery.post('/controlpanel/CategoryGet', { id: this.value }, function (data) {
+                $(data).each(function (idx, p) {
+                    
+                    $(slccategorychild).append('<option value="'+p.id+'">'+p.name+'</option>')
+
+                })
+            })
+        })
+        btnSaveBaseData.onclick = function () {
+            this.textContent='در حال ذخیره اطلاعات ...'
+        }
+    </script>
+    <div class="col-sm-5">
+        <div class="alert-success" id="divSuccessDiscount">@TempData["msgDsicountStore"]</div>
+        <div class="card-container padded">
+            <div class="title">
+               <i><img src="~/Icons/discount.png" style="width:20px;height:20px" /> </i><p style="font-size:medium;font-style:italic">ارایه تخفیف بر روی کل فروشگاه</p>
+                <h5 class="text-muted">
+                    <small>
+                        <span class="text-danger">*</span> فیلدهای ستاره&zwnj;دار اجباری هستند
+                    </small>
+                </h5>
+               
+                <form action="/controlpanel/GetDataAddStorePart3Discount" method="post">
+                    <div class="form-group">
+                        @if (item.DiscountPersend == null) {
+                        <select id="slcDiscountPer"name="perdis" class="form-control" style="font-family:F_sina">
+                            <option value="-1" style="font-size:medium">
+                                انتخاب درصد تخفیف
+                            </option>
+                            @for (int i = 5; i <= 95; i++)
+                            {
+                                <option style="font-style:normal" value="@i">@i %</option>
+                            }
+                        </select>
+                        }
+                        else
+                        {
+                            <select id="slcDiscountPer" name="perdis" class="form-control" style="font-family:F_sina">
+                                <option value="-1" style="font-size:medium">
+                                    انتخاب درصد تخفیف
+                                </option>
+                                <option style="font-style:normal" value="@item.DiscountPersend.Value">@($"{item.DiscountPersend}--------انتخاب شده") %</option>
+                                @for (int i = 5; i <= 95; i = i + 5)
+                                {
+                                    
+                                    <option style="font-style:normal" value="@i">@i %</option>
+                                }
+                            </select>
+                        }
+                    </div>
+                    <br />
+
+                    <input value="@($"{item.StartDate}")" id="txtGetDateStartDiscount" placeholder="تاریخ شروع تخفیف" style="border-color:#a0be46;padding-right:0%;font-size:medium;padding-right:2%" name="startdate"><span style="padding:5%">تا</span>
+
+                    <input value="@item.ExpiredDate" id="txtGetDateEndDiscount" style="padding-right:0%;font-size:medium;border-color:#a0be46;padding-right:2%" placeholder="تاریخ پایان تخفیف" name="enddate"/>
+                    <br /><br />
+                    <button class="btn btn-bazaar btn-sm center" id="btnsenddiscount">ذخیره اطلاعات تخفیف کلی فروشگاه</button>
+                </form>
+            </div>
+
+        </div>
+      
+    </div>
+
+ 
+
+    <div class="col-sm-1"></div>
+
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+
+    @Html.Partial("~/Views/Partials/workhours.cshtml")
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+}
+<script>
+    btnsenddiscount.onclick = function () {
+        this.textContent='در حال ذخیره اطلاعات ...'
+    }
+</script>
+
+
+
+
+
+
+
+
+
+

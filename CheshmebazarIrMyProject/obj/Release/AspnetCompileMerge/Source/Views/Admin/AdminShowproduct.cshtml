@@ -1,0 +1,146 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  
+    <link href="~/Template/css/default.css" rel="stylesheet" />
+    <link href="~/Template/css/bartarinha_font.css" rel="stylesheet" />
+    <link href="~/Template/css/carousel.css" rel="stylesheet" />
+
+
+
+    <script src="~/Template/js/inspectlet.js"></script>
+    <script src="~/Template/js/atrk.js"></script>
+    <script src="~/Template/js/analytics.js"></script>
+    <script src="~/Template/js/jquery-2.js"></script>
+
+</head>
+<body>
+    <h3 style="color:green;margin:auto">صفحه تایید این محصول</h3>
+   
+
+   @foreach (var item in ViewBag.d as IEnumerable<CheshmebazarIrMyProject.Models.Product>)
+   {
+    <a href="/admin/AdminProductConfirm?id=@(item.Id)" class="btn btn-success">تایید محصول</a>
+   <a href="/admin/AdminDeleteProduct?id=@(item.Id)" class="btn btn-danger">حذف محصول</a>
+    <a href="/admin/AdminProductsManagment" class="btn btn-primary pull-left">>>>>>>></a>
+    <div id="sections">
+        <section class="reverse no-padding">
+            <div class="container">
+                <div class="container-wrapper">
+                    <div class="@*list-section*@ list-section2">
+
+                        <div class="more-wrapper">
+                            <div class="title">
+
+
+                                <h1 class="a_title">
+
+                                    <label style="color:#000000">@item.Name</label>
+                                    <label style="color:#000000;font-size:x-small">  قیمت واقعی : @item.Price </label>
+                                    <nima style="color:orangered">/</nima>
+                                    <embed x-ms-playtodisabled="true" />
+                                    <label style="color:green;    font-size:x-small">
+                                        قیمت با تخفیف :
+                                        @item.OfPrice
+                                    </label>
+                                    <a href="/admin/adminshowstore?id=@(item.Store_Id)" class="pull-left">مشاهده فروشگاه مربوطه</a>
+
+                                </h1>
+
+
+
+                              
+                            </div>
+
+
+                            <div class="bbb">
+                              
+                                <div class="row">
+                                   
+
+                                    <div class="col-sm-12">
+
+
+
+                                      <div >
+                                          @foreach (var item1 in item.SliderForProducts.Where(x=>x.product_Id==item.Id).ToList())
+                                          {
+                                              <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item1.pic)}")"width="150" height="200" />
+                                          }
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="no-padding">
+            <div class="container">
+                <div class="container-wrapper">
+                    <div class="description">
+                        <div class="body bbb">
+                            <p>@item.Txt</p>
+                        </div>
+
+
+                        <hr class="ad-hr">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+                                                        }
+
+
+    <script src="~/Template/js/bootstrap.js"></script>
+    <script src="~/Template/js/metisMenu.js"></script>
+    <script src="~/Template/js/bootstrap-select.js"></script>
+    <script src="~/Template/js/typeahead.js"></script>
+    <script src="~/Template/js/validator.js"></script>
+    <script src="~/Template/js/app.js"></script>
+    <script src="~/Template/js/jquery_003.js"></script>
+</body>
+
+</html>

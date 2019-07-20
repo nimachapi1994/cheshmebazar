@@ -1,0 +1,306 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminShowStore</title>
+    <link href="~/Template/css/default.css" rel="stylesheet" />
+    <link href="~/Template/css/bartarinha_font.css" rel="stylesheet" />
+    <link href="~/Template/css/carousel.css" rel="stylesheet" />
+
+
+
+    <script src="~/Template/js/inspectlet.js"></script>
+    <script src="~/Template/js/atrk.js"></script>
+    <script src="~/Template/js/analytics.js"></script>
+    <script src="~/Template/js/jquery-2.js"></script>
+
+</head>
+@foreach (var item in ViewBag.showConfirmStore as IEnumerable<CheshmebazarIrMyProject.Models.Store>)
+{
+    
+    <body>
+        <h3>صفحه تایید این فروشگاه</h3>
+       <a href="/admin/AdminConfirmStore?id=@(item.Id)" class="btn btn-success">تایید</a>
+
+        <a href="/admin/AdminControlPanel" class="btn btn-primary pull-left">>>>>>>></a>
+        <div>
+
+            <div id="sections">
+                <section class="reverse no-padding">
+
+                    <div class="container">
+                        <div class="container-wrapper">
+                            <div class="@*list-section*@ list-section2">
+
+                                <div class="more-wrapper">
+                                    <div class="title">
+                                        <h1 class="a_title">
+                                      @if (item.Logo == null)
+                                      { <img src="~/Template/img/logo/glasses.png" width="70" height="50" />}
+                                      else
+                                      {
+                                        <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item.Logo)}")" width="70" height="50" />
+                                      }
+                                            <a href="">@item.Name</a>
+                                            <label style="color:darkcyan;font-size:small"> این مرکز دارای @item.DiscountPersend درصد تخفیف کلی است</label>
+                                        </h1>
+      
+                                    </div>
+
+
+                                    <div class="bbb">
+                                        <div class="row">
+                                            <div class="col-md-12 contact-description">
+                                                <i style="color:orangered">|||</i>  <label class="control-label" style="color:green;font-size:larger;padding-left:2%;padding-right:0%">@item.Motto</label><i style="color:orangered">|||</i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-sm-4 col-md-4">
+                                                <br />
+                                                <br />
+
+
+                                                <img src="~/Icons/telephone-of-old-design.png" style="width:30px;height:30px;padding-bottom:3%" /> <label style="font-size:small">@item.PhoneOne</label>
+                                                <br />
+                                                <img src="~/Icons/telephone-of-old-design.png" style="width:30px;height:30px;padding-bottom:3%" /> <label style="font-size:medium">@item.PhoneTwo</label>
+                                                <br />
+                                                <img src="~/Icons/telephone-of-old-design.png" style="width:30px;height:30px;padding-bottom:3%" /> <label style="font-size:medium">@item.PhoneThree</label>
+                                                <br />
+                                                <img src="~/Icons/smartphone-call.png" style="width:30px;height:30px;padding-bottom:3%" /> <label style="font-size:medium">@item.Mobile</label>
+                                                <br />
+
+                                                <img src="~/Icons/whatsapp-32.png" style="width:30px;height:30px;padding-bottom:3%" /> <label style="font-size:medium">@item.Whsup</label>
+
+                                                <br /><br />
+                                                <img src="~/Icons/location-pointer.png" style="width:10px;height:20px;padding-bottom:3%" />  <label>@item.City</label><br />
+                                                <b>آدرس : </b> <p>@item.Address</p><br />
+                                               
+
+                                                <label style="padding-right:5%"><b>@item.TotalVistor</b></label> <label>بازید</label>
+                                            </div>
+                                            <div class="col col-sm-3 col-md-3 pull-right">
+
+
+                                                <br />
+                                                <br />
+
+
+                                                <img src="~/Icons/if_telegram_1419139.png" style="width:30px;height:30px;padding-bottom:3%" />  <a href="@item.TelegramChannel"></a><br />
+                                                <img src="~/Icons/instagram.png" style="width:30px;height:30px;padding-bottom:3%" />  <a href="@item.Instagram"></a><br />
+
+                                                <img src="~/Icons/facebook.png" style="width:30px;height:30px;padding-bottom:3%" />  <a href="@item.Facebook"></a><br />
+                                                <img src="~/Icons/linkedin.png" style="width:30px;height:30px;padding-bottom:3%" />  <a href="@item.LikedIn"></a><br />
+                                                <img src="~/Icons/twitter.png" style="width:30px;height:30px;padding-bottom:3%" />  <a href="@item.Twitter"></a><br />
+                                                <img src="~/Icons/google-plus.png" style="width:30px;height:30px;padding-bottom:3%" />  <a href="@item.GooglePlus"></a><br />
+
+                                                <img src="~/Icons/worldwide.png" style="width:30px;height:30px;padding-bottom:3%" />  <a href="@item.WebSite"></a>
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <label>تعداد محصول : @(item.Products.Where(x=>x.Store_Id==item.Id).Count())</label><br/>
+
+
+                                                <a href="" class="btn btn-success btn-xs">مشاهده محصولات یا خدمات این مرکز</a>
+                                                <br />
+
+                                            </div>
+                                            <div class="col col-sm-5 col-md-5 pull-left">
+
+
+
+                                                <div class="pull-left">
+                                                    <img src="~/Template/img/article-1-bg.jpg" style="width:250px;height:300px;caption-side:bottom" />
+                                                    @*<label class="control-label" style="color:green;font-size:larger">Google Map</label>*@
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                 
+                                    <!--googleoff: all-->
+                                    <!--googleon: all-->
+                                 @if (item.SliderForStores.Where(x => x.Store_Id == item.Id) != null)
+                                 {
+                                    <div class="bbb slider">
+                                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                                            <ol class="carousel-indicators">
+                                                @{ string active = "active";}
+                                                @for (int i = 0; i < item.SliderForStores.Where(x => x.Store_Id == item.Id).Count(); i++)
+                                                {
+                                                    <li data-target="carousel-example-generic" data-slide-to="@i" class=" @active "></li>
+                                                    active = "";
+                                                }
+
+                                            </ol>
+                                            <div class="carousel-inner" role="listbox">
+                                                @{
+                                                    active = "active";
+                                                }
+                                                @foreach (var item1 in item.SliderForStores.Where(x => x.Store_Id == item.Id).ToList())
+                                                {
+                                                    <div class="item @active">
+                                                        <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item1.Pic)}")" title="@item.Name">
+                                                    </div>
+                                                    active = "";
+                                                }
+
+
+
+                                            </div>
+                                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+
+                                                <span aria-hidden="true"><img src="~/Icons/left-chevron.png" style="width:40px;height:20px" /></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+
+                                                <span aria-hidden="true"><img src="~/Icons/right-chevron.png" style="width:40px;height:20px;padding-top:4%" class="text-center" /></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                                    }
+
+
+                                    <script>
+        $(function () {
+            $(carousel-example-generic).carousel({ interval: 1000 })
+        })
+                                    </script>
+
+                                    <div class="bbb slider">
+                                        <video src="@item.Video" width="500" height="350" loop></video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="no-padding">
+                    <div class="container">
+                        <div class="container-wrapper">
+                            <div class="description">
+                                <div class="body bbb">
+                                    <p>@item.Txt</p>
+                                </div>
+
+
+                                <hr class="ad-hr">
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+
+                  
+
+                    @*------------------------------------------------------------------------------------*@
+                    @*Show Up Row*@
+
+                
+
+                </div>
+            </div>
+            <label>کلمات کلیدی</label>
+            <div>
+            <p>
+             @if (item.KeyWords != null)
+             {
+                
+                    var d = item.KeyWords.Split(',');
+
+                
+                    <i class="glyphicon glyphicon-tag iiii"></i>
+                   foreach (var itemkeywords in d.ToList())
+                    {
+
+                        <label>@itemkeywords</label>
+
+
+                 }
+             }
+             else
+             {
+                 break;
+                 
+             }
+
+
+            </p>
+        </div>
+
+            <br /><hr />
+
+            <script src="~/Template/js/jquery-2.js"></script>
+            <body id="bd">
+            </body>
+            <script>
+    $(bd).html(function () {
+        $(divWorkClock).hide();
+        $(divContactFormToProvider).hide();
+        $(divCustomerOpinions).hide();
+        $(DivThisProviderProducts).hide()
+    })
+    $(btnShowDivWorkClocks).click(function () {
+        $(divWorkClock).show();
+        $(divContactFormToProvider).hide();
+        $(divCustomerOpinions).hide();
+        $(DivThisProviderProducts).hide()
+    })
+    $(btnShowDivThisProviderProducts).click(function () {
+        $(divWorkClock).hide();
+        $(divContactFormToProvider).hide();
+        $(divCustomerOpinions).hide();
+        $(DivThisProviderProducts).show();
+    })
+    $(btnShowDivCutomerOpinions).click(function () {
+        $(divWorkClock).hide();
+        $(divContactFormToProvider).hide();
+        $(divCustomerOpinions).show();
+        $(DivThisProviderProducts).hide()
+    })
+    $(btnShowDivProviderContact).click(function () {
+        $(divWorkClock).hide();
+        $(divContactFormToProvider).show();
+        $(divCustomerOpinions).hide();
+        $(DivThisProviderProducts).hide()
+    })
+            </script>
+        
+
+
+         
+
+            <script src="~/Template/js/jquery-2.js"></script>
+
+            <link href="~/Template/css/simple-sidebar.css" rel="stylesheet" />
+
+        </div>
+
+        <script src="~/Template/js/jquery-2.js"></script>
+        <script src="~/Template/js/bootstrap.js"></script>
+        <script src="~/Template/js/metisMenu.js"></script>
+        <script src="~/Template/js/bootstrap-select.js"></script>
+        <script src="~/Template/js/typeahead.js"></script>
+        <script src="~/Template/js/validator.js"></script>
+        <script src="~/Template/js/app.js"></script>
+        <script src="~/Template/js/jquery_003.js"></script>
+    </body>
+}
+
+</html>

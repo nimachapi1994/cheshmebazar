@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "AdminCityManagment";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>نام زیر دسته</th>
+        <th>عملیات ویرایش</th>
+        <th>حذف</th>
+    </tr>
+
+    @foreach (var item in ViewBag.id as IEnumerable<CheshmebazarIrMyProject.Models.City>)
+    {
+        <tr>
+            @if (ViewBag.id != item.Id)
+            {
+                <td>@item.Name</td>
+                                    <td style="width:7%">
+                                        <form action="/admin/AdminCategoryManagement">
+                                            <button name="idd" value="@item.Id" class="btn btn-success">ویرایش</button>
+                                        </form>
+
+
+
+
+                                    </td>
+                                 
+            }
+            else
+            {
+                <form action="/CategoryManament/UpdateChildCategory">
+                    <td>
+                        <div class="form-group">
+                            <input name="name" value="@item.Name" class="form-control" placeholder="اسم دسته را وارد کنید" />
+                        </div>
+                    </td>
+
+                    <td>
+                 
+                        <button name="id" value="@item.Id" class="btn btn-success">ذخیره</button>
+                        <button name="id" value="-1" class="btn btn-primary" formaction="/admin/AdminCategoryManagement">
+                            بی خیال
+                        </button>
+                    </td>
+                </form>
+            }
+
+        </tr>
+    }
+</table>
+
+
+
+

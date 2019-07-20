@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "ContactCustomerToAdmin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+
+<form action="/home/SendMsgToAdmin" method="post">
+    <div style="margin:auto;width:42%">
+        <h3>ارسال پیام به ادمین</h3>
+        <br />
+        <div class="alert-success">@TempData["msgoksendtoadmin"]</div>
+        <br />
+        <div class="form-group">
+            <label  for="txtNameAndFname">نام و نام خانودگی </label>
+            <br />
+            <input name="name" id="txtNameAndFname" class="form-control" placeholder="مثال : حسن حسنی" />
+            <br />
+            <label for="txtemail">ایمیل </label>
+            <br />
+            <input name="email" class="form-control" id="txtEmail" placeholder="Example :        Jack@gmail.com" />
+            <br />
+        </div>
+        <div class="form-group">
+            <label for="Txt">متن </label>
+            <br />
+            <textarea name="txt" placeholder="......." class="form-control"></textarea>
+            <br />
+        </div>
+        <button class="btn btn-info btn-block btn-md"style="border-radius:20%"id="btnsend">ذخیره</button>
+    </div>
+</form>
+<script>
+    btnsend.onclick = function () {
+        this.textContent='در حال ارسال ...'
+    }
+</script>

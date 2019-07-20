@@ -1,0 +1,288 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/Storelayout.cshtml";
+}
+
+
+
+
+
+
+<div class="container">
+    <script src="~/Template/js/jquery-2.js"></script>
+
+    <div class="tab-content card-container padded">
+        <div class="tab-pane active">
+            <style scoped="">
+                table.apps-table td, table.apps-table td * {
+                    color: #777 !important;
+                }
+            </style>
+            <div>
+                @if (TempData["msgSaveCompateProduct"] != null)
+                {
+                    <div class="alert-success">@TempData["msgSaveCompateProduct"]</div>
+                }
+                @foreach (var item in ViewBag.showproduct1 as IEnumerable<CheshmebazarIrMyProject.Models.ShowOneProduct_Result>)
+                {
+                    <form action="/controlpanel/AddProductConfirmPart1" method="post" enctype="multipart/form-data">
+                        <a class="btn btn-bazaar btn-sm" href="/controlpanel/AddProductComments">مدیریت کامنت های این محصول</a>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <br />
+                                <div class="alert-success"id="divShowLogoSaveSuccess"></div>
+                                <div class="container" style="padding-right:10%">
+                                    <button class="btn btn-warning btn-xs"type="button"value="@item.Id" id="btnCancelLogo">&times;</button>
+                                  @if (item.Logo != null)
+                                  {
+                                    <img id="imgLogo" src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item.Logo)}")" class="img img-responsive img-circle img-rounded img-thumbnail"  style="width:100px;height:40%" />
+
+                                  }
+                                  else
+                                  {
+                                    <img id="imgLogo" src="~/Template/img/logo/glasses.png" style="width:100px;height:50px" class="img img-rounded img-responsive img-thumbnail" />
+
+                                  }
+                                    <br />
+                                    <label>تغییر لوگو</label><br />
+                                    <input type="file"typeof="image/*" id="txtlogo"  />
+                                    <br />
+                                    <button type="button" class="btn btn-bazaar btn-xs"id="savelogo">ذخیره لوگو</button>
+                                    <br /><br />
+
+                                </div>
+                                <script>
+                                    if (document.getElementById("#txtlogo") == null || txtlogo.files==null||$(txtlogo).val('')||$(txtlogo).attr('src','')) {
+                                        txtlogo.src = '';
+                                        $(txtlogo).html('')
+                                        $(txtlogo).val('')
+                                    } 
+                                </script>
+                                <div class="container">
+
+                                    <div class="form-group">
+                                        <label>نام محصول</label>
+                                        <input value="@item.Name" name="name" class="form-control" style="width:30%" />
+                                    </div><br />
+
+                                </div>
+                                <div class="form-group">
+                                    <label>توضیحات محصول</label>
+                                    <textarea name="txt" style = "width:70%;height:30%"class = "form-control btn-block">@item.Txt</textarea>
+                                </div>
+                                <br />
+                                <div class="form-group">
+                                    <label class="control-label">قیمت</label>
+                                    <input value="@item.Price" name="price" placeholder="مثال :100000" class="form-control" style="width:50%;font-family:F_sina;font-size:large" id="txtprice" />
+                                </div>
+                                <hr />
+                              
+                                    <div class="form-group" id="divaddimg">
+                                        <div class="alert-success">@TempData["msgDangerForInsertImage"]</div>
+                                        <br />
+                                        <label>انتخاب تصاویر</label>
+                                        <br />
+                                        <button class="btn btn-bazaar"type="button" id="btnaddimg">+</button><br />
+                                        <br />
+                                        <input type="file" typeof="image/*" name="img1" class="form-control" id="txtimg1" style="width:80%" />
+                                        <br />
+                                    </div>
+                            
+                          
+
+                                <br />
+
+                                <hr />
+                            </div>
+                            <div class="col-sm-6">
+                                @for (int i = 0; i < 2; i++)
+                                {
+                                    <br />
+                                }
+                                <hr />
+
+                                <i><img src="~/Icons/discount.png" style="width:20px;height:20px" /> </i> <label>ارایه تخفیف</label>
+                                <div class="form-group">
+                                    <select onchange="f1()" id="slcdis" name="DiscountPesend" class="form-control" style="font-size:small">
+                                        <option value="-1">
+                                            انتخاب درصد تخفیف
+                                        </option>
+                                        @for (int i = 5; i <= 95; i++)
+                                        {
+                                            <option value="@i">@i %</option>
+                                        }
+                                    </select>
+
+                                </div>
+                                <br />
+                                <br />
+                                <button class="btn btn-primary btn-xs">محاسبه قیمت با احتساب تخفیف</button><span style="padding-right:10%"></span><label id="lbloffprice" style="color:green;font-family:sina;font-size:large">   </label><span><small>تومان</small></span>
+                                <br />
+                                <br />
+
+                                <input name="OfPrice" hidden="hidden" id="txtofprice" />
+                                <input name="StartDateDiscount" placeholder="تاریخ شروع تخفیف" style="border-color:green;padding-right:10%"><span style="padding:5%">تا</span>    <input name="ExpiredDateDiscount" style="padding-right:10%;border-color:green" placeholder="تاریخ پایان تخفیف" />
+                                <br /><br />
+                                <hr />
+                                <div class="form-group">
+                                    <label class="fontclass"> لطفا کلمات کلیدی را با فرمت زیر وارد کرده و بین هر کلمه یک علامت , قرار بدهید </label><br />
+                                    <input name="keywords" placeholder=" مثال
+                                           کفش ترک , لباس مجلسی , چلوکباب , ..." class="form-control" style="width:80%" />
+                                </div>
+                                @for (int i = 0; i < 7; i++)
+                                {
+                                    <br />
+                                }
+                                <button class="btn btn-bazaar btn-block " id="btnsend">ثبت نهایی</button>
+                            </div>
+                        </div>
+
+                        
+                    </form>
+
+
+                    <div class="col-sm-10 text-center">
+
+
+                        <div class="card-container padded" id="divgetimage">
+                           
+
+                        
+                         
+                                @foreach (var item3 in ViewBag.showimg as IEnumerable<CheshmebazarIrMyProject.Models.SliderForProduct>)
+                                {
+                                    <div class="bbb pull-right" style="width:15%" id="divgetandshowimg">
+
+
+                                        <div class="img">
+                                            <img src="@($"data:image/jpeg;base64,{Convert.ToBase64String(item3.pic)}")" alt="@item.Name" class="placeholder img-responsive">
+                                        </div>
+                                        <br />
+
+                                        <button class="btn btn-danger" type="button" id="btndeleteimage" value="@item3.Id">حذف تصویر</button>
+
+
+
+                                    </div>
+
+                                }
+
+
+                        </div>
+
+                    </div>
+                }
+
+
+            </div>
+
+
+        </div>
+    </div>
+              
+   
+                 
+    <script>
+        $("div").delegate('#btndeleteimage', 'click', function () {
+        var tr = $(this).parent();
+        jQuery.post('/controlpanel/DeleteProductImages', { id: $(this).val() }, function () {
+            $(tr).remove()
+        })
+        })
+        
+        $("div").delegate('#btnCancelLogo', 'click', function () {
+            jQuery.post('/controlpanel/deleteproductlogo', { id: $(this).val() }, function () {
+                $(imgLogo).removeAttr('src');
+                $(imgLogo).val('')
+                $(imgLogo).html('')
+            })
+        })
+    </script>
+    <script>
+     
+            if (document.getElementById("#txtimg") == null || $(txtimg).val('') || $(txtimg).attr('src', '')) {
+                $(txtimg).removeAttr('name')
+            } else {
+                $(txtimg).attr('name', 'img')
+            }
+
+            if (document.getElementById("#txtimg1") == null || $(txtimg1).val('') || $(txtimg1).attr('src', '')) {
+                $(txtimg1).removeAttr('name')
+            } else {
+                $(txtimg1).attr('name', 'img1')
+            }
+      
+    </script>
+    <script>
+        btnCancelLogo.onclick = function () {
+            $(imgLogo).removeAttr('src')
+            $(txtlogo).removeAttr('src');
+            $(txtlogo).val('')
+        }
+    </script>
+    <script>
+        $(savelogo).click(function () {
+            $(divShowLogoSaveSuccess).html('')
+            data = new FormData();
+            data.append('logo1', txtlogo.files[0]);
+          
+            $.ajax({
+                url: '/controlpanel/AddProductGetLogo',  
+                type: 'POST',
+                data: data,
+                dataType: 'json',
+                contentType: false,
+                processData: false,
+                success: function () {
+                    
+                    txtlogo.src = ""
+                    $(divShowLogoSaveSuccess).html('لوگو با موفقیت ذخیره شد')
+                },
+                error: function (e) {
+                    alert('لطفا فیلد ورودی عکس لوگو را کنترل نمایید و سپس نسبت به ثبت آن اقدام کنید')
+                }
+            })
+        })
+      
+    </script>
+   
+    <script>
+    
+        btnaddimg.onclick = function () {
+            txtimg1.src != null;
+            $(divaddimg).append(' <input type="file" typeof="image/*" name="img" class="form-control" id="txtimg" style="width:80%" /><br />');
+        }
+    </script>
+
+    <script>
+                                    $(slcdis).change(function () {
+                                        var d = parseInt(txtprice.value)
+                                        var f = d * slcdis.value / 100;
+                                        var s = d - f;
+                                        lbloffprice.innerHTML = s;
+                                        txtofprice.value = s;
+                                    })
+    </script>
+
+
+</div>
+<style>
+    .fontclass {
+        font-family: F_maryam;
+    }
+</style>
+<script>
+    $(txtlogo).change(function () {
+        imgLogo.src = ''
+        var reader = new FileReader()
+        reader.readAsDataURL(this.files[0])
+        reader.onloadend = function (x) {
+            
+            imgLogo.src = x.target.result;
+        }
+        
+       
+    })
+</script>
+<body id="bd"></body>

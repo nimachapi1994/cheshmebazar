@@ -1,0 +1,657 @@
+﻿<form action="/controlpanel/GetWorkHours" method="post">
+    <div class="card-container padded">
+        <div class="title">
+            ساعات کاری فروشگاه    <label style="font-size:smaller;color:green">در صورتی که به صورت یک شیفت کار می کنید نیاز به پر کردن شیفت دوم نیست</label>
+
+        </div>
+
+
+        <div class="container">
+
+            <label>شنبه  : </label>
+
+            <span><b style="padding-right:5.2%"></b></span>
+            <label style="padding-left:1%;color:blue">شیفت یک از ساعت</label>
+            <select name="shanbe1">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="shanbe2">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:blue">تا ساعت</b></span>
+            <select name="shanbe3">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="shanbe4">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+
+            <label style="padding:1%;color:green">شیفت دو از ساعت</label>
+            <select name="shanbe5">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="shanbe6">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:green">تا ساعت</b></span>
+            <select name="shanbe7">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select  name="shanbe8">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @*=================================یکشنبه===========================================*@
+        <div class="container">
+
+            <label>یکشنبه  : </label>
+
+            <span><b style="padding-right:4%"></b></span>
+            <label style="padding-left:1%;color:blue">شیفت یک از ساعت</label>
+            <select name="yekshanbe1">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="yekshanbe2">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:blue">تا ساعت</b></span>
+            <select name="yekshanbe3">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="yekshanbe4">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+
+            <label style="padding:1%;color:green">شیفت دو از ساعت</label>
+            <select name="yekshanbe5">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="yekshanbe6">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:green">تا ساعت</b></span>
+            <select name="yekshanbe7">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="yekshanbe8">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+
+        </div>
+
+        @*=================================دوشنبه===========================================*@
+        <div class="container">
+
+            <label>دوشنبه  : </label>
+
+            <span><b style="padding-right:4%"></b></span>
+            <label style="padding-left:1%;color:blue">شیفت یک از ساعت</label>
+            <select name="doshanbe1">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="doshanbe2">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:blue">تا ساعت</b></span>
+            <select name="doshanbe3">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="doshanbe4">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+
+            <label style="padding:1%;color:green">شیفت دو از ساعت</label>
+            <select name="doshanbe5">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="doshanbe6">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:green">تا ساعت</b></span>
+            <select name="doshanbe7">
+                @for (int i = 1; i < 60; i++)
+                {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="doshanbe8">
+                @for (int i = 6; i < 24; i++)
+                {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+
+        </div>
+
+        @*=================================سه شنبه===========================================*@
+        <div class="container">
+
+            <label>سه شنبه  : </label>
+
+            <span><b style="padding-right:2.9%"></b></span>
+            <label style="padding-left:1%;color:blue">شیفت یک از ساعت</label>
+            <select name="seshanbe1">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="seshanbe2">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:blue">تا ساعت</b></span>
+            <select name="seshanbe3">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="seshanbe4">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <label style="padding:1%;color:green">شیفت دو از ساعت</label>
+            <select name="seshanbe5">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="seshanbe6">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:green">تا ساعت</b></span>
+            <select name="seshanbe7">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="seshanbe8">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+
+        </div>
+
+        @*=================================چهارشنبه===========================================*@
+        <div class="container">
+
+            <label>چهارشنبه  : </label>
+
+            <span><b style="padding-right:2.8%"></b></span>
+            <label style="padding-left:1%;color:blue">شیفت یک از ساعت</label>
+            <select name="charshanbe1">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="charshanbe2">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:blue">تا ساعت</b></span>
+            <select name="charshanbe3">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="charshanbe4">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <label style="padding:1%;color:green">شیفت دو از ساعت</label>
+            <select name="charshanbe5">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="charshanbe6">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:green">تا ساعت</b></span>
+            <select name="charshanbe7">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="charshanbe8">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+
+
+        </div>
+
+
+        @*=================================پنجشنبه===========================================*@
+        <div class="container">
+
+            <label>پنجشنبه  : </label>
+
+            <span><b style="padding-right:4%"></b></span>
+            <label style="padding-left:1%;color:blue">شیفت یک از ساعت</label>
+            <select name="panjshanbe1">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="panjshanbe2">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:blue">تا ساعت</b></span>
+            <select name="panjshanbe3">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="panjshanbe4">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <label style="padding:1%;color:green">شیفت دو از ساعت</label>
+            <select name="panjshanbe5">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="panjshanbe6">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:green">تا ساعت</b></span>
+            <select name="panjshanbe7">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="panjshanbe8">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+
+
+        </div>
+
+        @*=================================جمعه===========================================*@
+        <div class="container">
+
+            <label>جمعه  : </label>
+
+            <span><b style="padding-right:3.7%"></b></span>
+            <label style="padding-left:1%;color:blue">شیفت یک از ساعت</label>
+            <select name="jome1">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="jome2">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:blue">تا ساعت</b></span>
+            <select name="jome3">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="jome4">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <label style="padding:1%;color:green">شیفت دو از ساعت</label>
+            <select name="jome5">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+                }
+
+            </select>
+            :
+            <select name="jome6">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+            <span><b style="padding-right:1%;padding-left:1%;color:green">تا ساعت</b></span>
+            <select name="jome7">
+                @for (int i = 1; i < 60; i++)
+            {
+
+                    <option value="@i">@i</option>
+
+
+                }
+
+            </select>
+            :
+            <select name="jome8">
+                @for (int i = 6; i < 24; i++)
+            {
+                    <option value="@i"> @i </option>
+
+                }
+
+            </select>
+
+
+        </div>
+
+
+
+        <button class="btn btn-bazaar btn-sm center" id="btnsendworkhourse">ذخیره اطلاعات</button>
+
+
+    </div>
+</form>
+<script>
+    btnsendworkhourse.onclick = function () {
+        this.textContent='درحال ذخیره اطلاعات ...'
+    }
+</script>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "MessageCustomerToAdmin";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+<div class="card-container">
+    <div class="pull-left" style="padding-right:5%">
+        <label style="font-size:small">مدیریت پیام مشتریان</label>
+    </div>
+    <br />
+    <br />
+    <table class="table table-bordered table-responsive table-hover" style="margin:auto;width:60%">
+        @foreach (var item in Model as IEnumerable<CheshmebazarIrMyProject.Models.MsgCustomerToAdmin>)
+        {
+
+            <tr>
+
+                <th>نام</th>
+             
+                <th>شماره تماس یا ایمیل</th>
+                <th>تاریخ ارسال</th>
+                <th>شرح پیام</th>
+            </tr>
+            <tr>
+
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Datee</td>
+                <td>
+                    <p>@item.Txt</p>
+                </td>
+            </tr>
+
+        }
+    </table>
+
+</div>
+
+
+
